@@ -13,7 +13,34 @@
 			}
 		]
 	},
-    "monster": [
+	"organization": [
+		{
+			"name": "I Cercatori delle Chiavi",
+			"source": "TKS",
+			"type": "Fazione Segreta",
+			"entries": [
+				"Un'organizzazione clandestina dedita alla ricerca di antiche chiavi arcane.",
+				{
+					"type": "entries",
+					"name": "Obiettivi",
+					"entries": [
+						"Recuperare tutte le chiavi sparse nel continente.",
+						"Impedire che cadano in mani sbagliate."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Gerarchia",
+					"entries": [
+						"Custode Supremo",
+						"Araldi delle Serrature",
+						"Iniziati"
+					]
+				}
+			]
+		}
+	],
+	"monster": [
         {
             "name": "Ser Sydwen Suenith",
             "source": "TKS",
