@@ -115,14 +115,39 @@
   ],
   "adventure": [
     {
+      "id": "TKS",
       "name": "The Keys Seekers",
       "source": "TKS",
-      "id": "tks",
+      "group": "other",
+      "alLength": {
+        "exact": 5
+      },
+      "alId": "TKS",
       "contents": [
         {
           "name": "Fazioni del Continente",
           "headers": [
+            "I Cercatori del Corno",
+            "I Raccoglitori di Chiavi",
+            "Le Cappe Bianche",
+            "Gli Amici del Lupo",
+            "Il Grande Mercato Itinerante"
+          ]
+        }
+      ]
+    }
+  ],
+  "adventureData": [
+    {
+      "id": "TKS",
+      "source": "TKS",
+      "data": [
+        {
+          "type": "section",
+          "name": "Fazioni del Continente",
+          "entries": [
             {
+              "type": "section",
               "name": "I Cercatori del Corno",
               "entries": [
                 "Avventurieri organizzati in piccoli gruppi di quattro membri, uniti dalla ricerca del leggendario Corno di Maar.",
@@ -146,6 +171,7 @@
             },
 
             {
+              "type": "section",
               "name": "I Raccoglitori di Chiavi",
               "entries": [
                 "Gruppi di quattro individui dedicati alla raccolta delle chiavi leggendarie sparse nel continente.",
@@ -170,6 +196,7 @@
             },
 
             {
+              "type": "section",
               "name": "Le Cappe Bianche",
               "entries": [
                 "Il gruppo armato più pericoloso del continente.",
@@ -193,6 +220,7 @@
             },
 
             {
+              "type": "section",
               "name": "Gli Amici del Lupo",
               "entries": [
                 "Individui solitari e diffidenti che vagano per il continente evitando la società.",
@@ -216,6 +244,7 @@
             },
 
             {
+              "type": "section",
               "name": "Il Grande Mercato Itinerante",
               "entries": [
                 "Una vasta carovana mercantile composta da oltre cinquanta carri.",
