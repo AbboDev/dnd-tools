@@ -11,6 +11,85 @@
       }
     ]
   },
+  "item": [
+    {
+      "name": "Chiave Sonar",
+      "type": "G",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "tier": "major",
+      "weight": 1,
+      "value": 0,
+      "source": "TKS",
+      "entries": [
+        "Questa chiave vibra quando un'altra Chiave si trova entro 1 miglio.",
+        "Come azione, il portatore può concentrarsi per percepire la direzione della Chiave più vicina entro 10 miglia.",
+        "Se una Chiave si trova sullo stesso piano di esistenza entro 100 miglia, la Chiave Sonar pulsa lentamente indicando la distanza approssimativa.",
+        "La chiave non può essere ingannata da illusioni o magie di occultamento di livello inferiore al 9°."
+      ]
+    },
+    {
+      "name": "Chiave Kaboom",
+      "type": "G",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "tier": "major",
+      "weight": 1,
+      "value": 0,
+      "source": "TKS",
+      "entries": [
+        "Questa chiave consente di aprire qualsiasi serratura non magica.",
+        "Se inserita in una serratura o struttura chiusa, può essere attivata per generare un'esplosione devastante centrata sul punto di inserimento.",
+        "L'esplosione distrugge completamente la struttura bersaglio e infligge 12d10 danni da forza a tutte le creature entro 6 metri (TS Destrezza CD 20 dimezza).",
+        "Gli oggetti non magici nell'area vengono automaticamente distrutti.",
+        "Dopo l'attivazione, la chiave non può essere riutilizzata fino al successivo tramonto."
+      ]
+    },
+    {
+      "name": "Chiave di Volta",
+      "type": "G",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "tier": "major",
+      "weight": 2,
+      "value": 0,
+      "source": "TKS",
+      "entries": [
+        "Questo artefatto è composto da due parti d'oro collegate da una lunga catena da agganciare alla vita.",
+        "La prima parte è una chiave semplice con impugnatura a forma di clessidra.",
+        "La seconda parte è un grande orologio da taschino grande quanto una fiaschetta.",
+        "Il foro della serratura appare sull'orologio solo quando la chiave viene avvicinata.",
+        "Quando la chiave viene inserita nell'orologio e ruotata, il portatore può manipolare il tempo.",
+        "Una volta per riposo lungo, può scegliere uno dei seguenti effetti:",
+        "• Fermare il tempo per 1 round.",
+        "• Riavvolgere il tempo di 6 secondi (1 round) per sé stesso.",
+        "• Accelerare un'azione, ottenendo un'azione aggiuntiva immediata.",
+        "L'abuso ripetuto dell'artefatto può attirare l'attenzione di entità extraplanari legate al tempo."
+      ]
+    },
+    {
+      "name": "Chiave del Cuore",
+      "type": "G",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "tier": "major",
+      "weight": 1,
+      "value": 0,
+      "source": "TKS",
+      "entries": [
+        "Questa chiave permette di estrarre l'anima di una creatura incapace o consenziente e conservarla al suo interno.",
+        "L'anima rimane stabile all'interno della chiave per 24 ore.",
+        "Entro quel tempo può essere trasferita in un corpo privo di anima.",
+        "Se il corpo è già occupato, entrambe le anime effettuano una prova di Carisma contrapposta; il vincitore mantiene il controllo del corpo.",
+        "Se l'anima non viene collocata entro 24 ore, essa ritorna al suo destino naturale.",
+        "Una creatura trasferita mantiene ricordi, personalità e capacità mentali, ma utilizza le caratteristiche fisiche del nuovo corpo."
+      ]
+    }
+  ],
   "monster": [
     {
       "name": "Ser Sydwen Suenith",
