@@ -199,11 +199,14 @@
       "id": "TKS",
       "name": "The Keys Seekers",
       "source": "TKS",
-      "group": "other",
-      "alLength": {
-        "exact": 5
+      "group": "homebrew",
+      "level": {
+        "start": 1,
+        "end": 20
       },
-      "alId": "TKS",
+      "published": "2026-01-01",
+      "author": "Thomas Abbondi",
+      "storyline": "None",
       "contents": [
         {
           "name": "Fazioni del Continente",
