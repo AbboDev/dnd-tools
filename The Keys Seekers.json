@@ -7,9 +7,11 @@
         "full": "The Keys Seekers",
         "version": "0.0.3",
         "authors": ["Abbo"],
-        "colorNight": "eda818"
+        "colorNight": "eda818",
+        "targetSchema": "1.0.0"
       }
-    ]
+    ],
+    "edition": "classic"
   },
   "item": [
     {
