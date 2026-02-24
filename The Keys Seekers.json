@@ -15,80 +15,296 @@
   },
   "item": [
     {
-      "name": "Chiave Sonar",
-      "type": "G",
+      "name": "Chiave Eterea",
+      "source": "TKS",
       "wondrous": true,
       "rarity": "artifact",
       "reqAttune": true,
-      "tier": "major",
-      "weight": 1,
-      "value": 0,
+      "charges": 1,
+      "recharge": "midnight",
+      "attachedSpells": ["etherealness"],
+      "entries": [
+        "Deve essere inserita in una serratura tracciata su una superficie solida o su uno specchio.",
+        "Spendendo 1 carica proietti il tuo spirito fuori dal corpo per 10 minuti.",
+        "Lo spirito può muoversi fino a 18 metri dal corpo, attraversare oggetti sottili e vedere nel Piano Etereo.",
+        "Il corpo rimane privo di sensi e indifeso.",
+        "Se il corpo subisce danni, l’effetto termina immediatamente."
+      ]
+    },
+    {
+      "name": "Chiave dei Costrutti",
+      "source": "TKS",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 1,
+      "recharge": "midnight",
+      "attachedSpells": ["animate objects"],
+      "entries": [
+        "Deve essere inserita in un oggetto non magico di taglia Large o inferiore.",
+        "Spendendo 1 carica l’oggetto si anima per 1 ora.",
+        "Usa le statistiche di un’Armatura Animata con PF dimezzati.",
+        "Obbedisce ai tuoi comandi verbali."
+      ]
+    },
+    {
+      "name": "Chiave Due Pollici",
+      "source": "TKS",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 2,
+      "recharge": "midnight",
+      "attachedSpells": ["reduce"],
+      "entries": [
+        "Deve essere inserita nella fibbia della cintura o in un bracciale metallico.",
+        "Spendendo 1 carica diventi taglia Tiny per 10 minuti.",
+        "Hai vantaggio alle prove di Furtività.",
+        "I tuoi danni con armi normali sono dimezzati."
+      ]
+    },
+    {
+      "name": "Chiave dell’Angelo",
+      "source": "TKS",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 1,
+      "recharge": "midnight",
+      "attachedSpells": ["fly"],
+      "entries": [
+        "Deve essere inserita tra le scapole in un alloggiamento apposito o in un’armatura compatibile.",
+        "Spendendo 1 carica ottieni velocità di volo 9 metri per 10 minuti.",
+        "Se l’effetto termina mentre sei in aria, planeggi fino a terra senza subire danni."
+      ]
+    },
+    {
+      "name": "Chiave del Morso",
+      "source": "TKS",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 2,
+      "recharge": "midnight",
+      "attachedSpells": [],
+      "entries": [
+        "Deve essere inserita in una porta o varco fisico.",
+        "Spendendo 1 carica la porta si anima per 1 minuto.",
+        "CA 15, 30 PF, morso {@damage 2d6} danni perforanti.",
+        "Attacca la prima creatura che tenta di attraversarla.",
+        "L’effetto termina dopo il primo morso o dopo 1 minuto."
+      ]
+    },
+    {
+      "name": "Chiave Martello",
+      "source": "TKS",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 2,
+      "recharge": "midnight",
+      "attachedSpells": [],
+      "entries": [
+        "Può essere inserita in qualsiasi serratura non magica.",
+        "Spendendo 1 carica si trasforma in un martello pesante per 1 minuto.",
+        "Infligge {@damage 2d8} danni contundenti.",
+        "Contro oggetti e strutture i danni sono raddoppiati."
+      ]
+    },
+    {
+      "name": "Chiave Specchio",
+      "source": "TKS",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 2,
+      "recharge": "midnight",
+      "attachedSpells": ["phantasmal force"],
+      "entries": [
+        "Deve essere inserita in uno specchio o superficie riflettente.",
+        "Spendendo 1 carica una creatura entro 9 metri effettua TS Saggezza CD 16.",
+        "Se fallisce, un doppio speculare illusorio la tormenta per 1 minuto.",
+        "Ha svantaggio al primo attacco che effettua ogni turno."
+      ]
+    },
+    {
+      "name": "Chiave Ombra",
+      "source": "TKS",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 1,
+      "recharge": "midnight",
+      "attachedSpells": [],
+      "entries": [
+        "Può essere inserita esclusivamente nella Corona dell’Ombra.",
+        "Permette l’attivazione dei poteri della corona."
+      ]
+    },
+    {
+      "name": "Corona dell’Ombra",
+      "source": "TKS",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 1,
+      "recharge": "midnight",
+      "attachedSpells": ["summon shadowspawn"],
+      "entries": [
+        "Quando viene inserita la Chiave Ombra, spendendo 1 carica evochi 2 Ombre per 10 minuti.",
+        "Le Ombre obbediscono ai tuoi comandi."
+      ]
+    },
+    {
+      "name": "Chiave Spina",
+      "source": "TKS",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 1,
+      "recharge": "midnight",
+      "attachedSpells": ["entangle"],
+      "entries": [
+        "Deve essere inserita nel terreno naturale.",
+        "Spendendo 1 carica un’area di 6 metri diventa terreno difficile.",
+        "Le creature nell’area devono superare TS Forza CD 15 o essere trattenute.",
+        "Durata 1 minuto."
+      ]
+    },
+    {
+      "name": "Chiave dell’Incendio Inopportuno",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 5,
+      "recharge": "midnight",
+      "attachedSpells": ["fireball"],
       "source": "TKS",
       "entries": [
-        "Questa chiave vibra quando un'altra Chiave si trova entro 1 miglio.",
-        "Come azione, il portatore può concentrarsi per percepire la direzione della Chiave più vicina entro 10 miglia.",
-        "Se una Chiave si trova sullo stesso piano di esistenza entro 100 miglia, la Chiave Sonar pulsa lentamente indicando la distanza approssimativa.",
-        "La chiave non può essere ingannata da illusioni o magie di occultamento di livello inferiore al 9°."
+        "Può essere inserita in qualsiasi serratura.",
+        "Apre automaticamente qualsiasi serratura non magica o protetta da un incantesimo di livello pari o inferiore al bonus competenza del portatore.",
+        "Spendendo 1 carica, la serratura esplode come per l’incantesimo Palla di Fuoco (CD 18)."
+      ]
+    },
+    {
+      "name": "Chiave di Ercole",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 3,
+      "recharge": "midnight",
+      "attachedSpells": [],
+      "source": "TKS",
+      "entries": [
+        "Può essere utilizzata solo se inserita nella Cintura dell’Eroe.",
+        "Spendendo 1 carica, il portatore ottiene un bonus temporaneo di +4 alla Forza per 10 minuti.",
+        "Durante la durata ha vantaggio alle prove e ai tiri salvezza su Forza."
+      ]
+    },
+    {
+      "name": "Chiave dei Mille Volti",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 4,
+      "recharge": "midnight",
+      "attachedSpells": ["disguise self"],
+      "source": "TKS",
+      "entries": [
+        "Va inserita sotto al mento.",
+        "Spendendo 1 carica, il portatore può alterare il proprio aspetto come per l’incantesimo Camuffare Sé Stesso.",
+        "Le modifiche sono tangibili e fisicamente reali.",
+        "L’effetto dura 1 ora."
+      ]
+    },
+    {
+      "name": "Chiave della Creazione",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 3,
+      "recharge": "midnight",
+      "attachedSpells": ["creation"],
+      "source": "TKS",
+      "entries": [
+        "Non viene inserita in serrature: deve essere ruotata facendo fuoriuscire la punta come una penna.",
+        "Spendendo 1 carica, il portatore può creare un oggetto non magico di dimensioni Large o inferiori che dura 1 ora.",
+        "Se viene creato un nuovo oggetto mentre uno precedente è ancora attivo, il primo oggetto svanisce immediatamente."
+      ]
+    },
+    {
+      "name": "Chiave Sonar",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "charges": 5,
+      "recharge": "midnight",
+      "attachedSpells": ["locate object"],
+      "source": "TKS",
+      "entries": [
+        "Spendendo 1 carica, il portatore percepisce la direzione della Chiave più vicina entro 10 miglia.",
+        "Spendendo 2 cariche, ne percepisce la distanza approssimativa.",
+        "Non può essere ingannata da illusioni o occultamenti inferiori al 9° livello."
       ]
     },
     {
       "name": "Chiave Kaboom",
-      "type": "G",
       "wondrous": true,
       "rarity": "artifact",
       "reqAttune": true,
-      "tier": "major",
-      "weight": 1,
-      "value": 0,
+      "charges": 2,
+      "recharge": "midnight",
+      "attachedSpells": ["disintegrate"],
       "source": "TKS",
       "entries": [
-        "Questa chiave consente di aprire qualsiasi serratura non magica.",
-        "Se inserita in una serratura o struttura chiusa, può essere attivata per generare un'esplosione devastante centrata sul punto di inserimento.",
-        "L'esplosione distrugge completamente la struttura bersaglio e infligge 12d10 danni da forza a tutte le creature entro 6 metri (TS Destrezza CD 20 dimezza).",
-        "Gli oggetti non magici nell'area vengono automaticamente distrutti.",
-        "Dopo l'attivazione, la chiave non può essere riutilizzata fino al successivo tramonto."
+        "Può essere inserita in qualsiasi serratura o struttura chiusa.",
+        "Spendendo 1 carica, genera un’esplosione distruttiva come per l’incantesimo Disintegrazione su un punto scelto."
       ]
     },
     {
       "name": "Chiave di Volta",
-      "type": "G",
       "wondrous": true,
       "rarity": "artifact",
       "reqAttune": true,
-      "tier": "major",
-      "weight": 2,
-      "value": 0,
+      "charges": 3,
+      "recharge": "midnight",
+      "attachedSpells": ["time stop"],
       "source": "TKS",
       "entries": [
-        "Questo artefatto è composto da due parti d'oro collegate da una lunga catena da agganciare alla vita.",
-        "La prima parte è una chiave semplice con impugnatura a forma di clessidra.",
-        "La seconda parte è un grande orologio da taschino grande quanto una fiaschetta.",
-        "Il foro della serratura appare sull'orologio solo quando la chiave viene avvicinata.",
-        "Quando la chiave viene inserita nell'orologio e ruotata, il portatore può manipolare il tempo.",
-        "Una volta per riposo lungo, può scegliere uno dei seguenti effetti:",
-        "• Fermare il tempo per 1 round.",
-        "• Riavvolgere il tempo di 6 secondi (1 round) per sé stesso.",
-        "• Accelerare un'azione, ottenendo un'azione aggiuntiva immediata.",
-        "L'abuso ripetuto dell'artefatto può attirare l'attenzione di entità extraplanari legate al tempo."
+        "Composta da due pezzi d’oro collegati da una lunga catena da agganciare alla vita.",
+        "Il foro appare sull’orologio solo quando la chiave si avvicina.",
+        "Spendendo 1 carica, il portatore può fermare il tempo per 1 round solo per sé stesso.",
+        "Spendendo 2 cariche, può riavvolgere il tempo di 1 round.",
+        "Spendendo 3 cariche, può ottenere un turno extra immediato."
       ]
     },
     {
       "name": "Chiave del Cuore",
-      "type": "G",
       "wondrous": true,
       "rarity": "artifact",
       "reqAttune": true,
-      "tier": "major",
-      "weight": 1,
-      "value": 0,
+      "charges": 2,
+      "recharge": "midnight",
+      "attachedSpells": ["magic jar"],
       "source": "TKS",
       "entries": [
-        "Questa chiave permette di estrarre l'anima di una creatura incapace o consenziente e conservarla al suo interno.",
-        "L'anima rimane stabile all'interno della chiave per 24 ore.",
-        "Entro quel tempo può essere trasferita in un corpo privo di anima.",
-        "Se il corpo è già occupato, entrambe le anime effettuano una prova di Carisma contrapposta; il vincitore mantiene il controllo del corpo.",
-        "Se l'anima non viene collocata entro 24 ore, essa ritorna al suo destino naturale.",
-        "Una creatura trasferita mantiene ricordi, personalità e capacità mentali, ma utilizza le caratteristiche fisiche del nuovo corpo."
+        "Spendendo 1 carica, può estrarre l’anima di una creatura incapace o consenziente.",
+        "L’anima può essere conservata per 24 ore.",
+        "Spendendo 1 carica, può inserirla in un corpo privo di anima.",
+        "Se il corpo è occupato, le anime effettuano una prova di Carisma contrapposta; il vincitore mantiene il controllo."
+      ]
+    },
+    {
+      "name": "Cintura dell’Eroe",
+      "wondrous": true,
+      "rarity": "artifact",
+      "reqAttune": true,
+      "attachedSpells": [],
+      "source": "TKS",
+      "entries": [
+        "Questa cintura possiede uno slot dedicato alla Chiave di Ercole.",
+        "La Chiave di Ercole può essere attivata solo quando è inserita nella cintura.",
+        "La cintura non conferisce altri benefici."
       ]
     }
   ],
