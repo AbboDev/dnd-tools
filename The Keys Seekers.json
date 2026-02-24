@@ -25,7 +25,7 @@
       "attachedSpells": ["etherealness"],
       "entries": [
         "Deve essere inserita in una serratura tracciata su una superficie solida o su uno specchio.",
-        "Spendendo 1 carica proietti il tuo spirito fuori dal corpo per 10 minuti.",
+        "Spendendo {@b 1 carica} proietti il tuo spirito fuori dal corpo per 10 minuti.",
         "Lo spirito può muoversi fino a 18 metri dal corpo, attraversare oggetti sottili e vedere nel Piano Etereo.",
         "Il corpo rimane privo di sensi e indifeso.",
         "Se il corpo subisce danni, l’effetto termina immediatamente."
@@ -41,9 +41,9 @@
       "recharge": "midnight",
       "attachedSpells": ["animate objects"],
       "entries": [
-        "Deve essere inserita in un oggetto non magico di taglia Large o inferiore.",
-        "Spendendo 1 carica l’oggetto si anima per 1 ora.",
-        "Usa le statistiche di un’Armatura Animata con PF dimezzati.",
+        "{@b Attivazione.} Deve essere inserita in un oggetto non magico di taglia Large o inferiore.",
+        "Spendendo {@b 1 carica} l’oggetto si anima per 1 ora.",
+        "Usa le statistiche di un’{@creature animated armor|MM} con PF dimezzati.",
         "Obbedisce ai tuoi comandi verbali."
       ]
     },
@@ -58,7 +58,7 @@
       "attachedSpells": ["reduce"],
       "entries": [
         "Deve essere inserita nella fibbia della cintura o in un bracciale metallico.",
-        "Spendendo 1 carica diventi taglia Tiny per 10 minuti.",
+        "Spendendo {@b 1 carica} diventi taglia Tiny per 10 minuti.",
         "Hai vantaggio alle prove di Furtività.",
         "I tuoi danni con armi normali sono dimezzati."
       ]
@@ -74,7 +74,7 @@
       "attachedSpells": ["fly"],
       "entries": [
         "Deve essere inserita tra le scapole in un alloggiamento apposito o in un’armatura compatibile.",
-        "Spendendo 1 carica ottieni velocità di volo 9 metri per 10 minuti.",
+        "Spendendo {@b 1 carica} ottieni velocità di volo 9 metri per 10 minuti.",
         "Se l’effetto termina mentre sei in aria, planeggi fino a terra senza subire danni."
       ]
     },
@@ -86,10 +86,9 @@
       "reqAttune": true,
       "charges": 2,
       "recharge": "midnight",
-      "attachedSpells": [],
       "entries": [
         "Deve essere inserita in una porta o varco fisico.",
-        "Spendendo 1 carica la porta si anima per 1 minuto.",
+        "Spendendo {@b 1 carica} la porta si anima per 1 minuto.",
         "CA 15, 30 PF, morso {@damage 2d6} danni perforanti.",
         "Attacca la prima creatura che tenta di attraversarla.",
         "L’effetto termina dopo il primo morso o dopo 1 minuto."
@@ -103,10 +102,9 @@
       "reqAttune": true,
       "charges": 2,
       "recharge": "midnight",
-      "attachedSpells": [],
       "entries": [
         "Può essere inserita in qualsiasi serratura non magica.",
-        "Spendendo 1 carica si trasforma in un martello pesante per 1 minuto.",
+        "Spendendo {@b 1 carica} si trasforma in un martello pesante per 1 minuto.",
         "Infligge {@damage 2d8} danni contundenti.",
         "Contro oggetti e strutture i danni sono raddoppiati."
       ]
@@ -121,8 +119,8 @@
       "recharge": "midnight",
       "attachedSpells": ["phantasmal force"],
       "entries": [
-        "Deve essere inserita in uno specchio o superficie riflettente.",
-        "Spendendo 1 carica una creatura entro 9 metri effettua TS Saggezza CD 16.",
+        "{@b Attivazione.} Deve essere inserita in uno specchio o superficie riflettente.",
+        "Spendendo {@b 1 carica} una creatura entro 9 metri effettua TS Saggezza {@dc 16}.",
         "Se fallisce, un doppio speculare illusorio la tormenta per 1 minuto.",
         "Ha svantaggio al primo attacco che effettua ogni turno."
       ]
@@ -161,9 +159,9 @@
       "recharge": "midnight",
       "attachedSpells": ["entangle"],
       "entries": [
-        "Deve essere inserita nel terreno naturale.",
-        "Spendendo 1 carica un’area di 6 metri diventa terreno difficile.",
-        "Le creature nell’area devono superare TS Forza CD 15 o essere trattenute.",
+        "{@b Attivazione.} Deve essere inserita nel terreno naturale.",
+        "Spendendo {@b 1 carica} un’area di 6 metri diventa terreno difficile.",
+        "Le creature nell’area devono superare TS Forza {@dc 15} o essere trattenute.",
         "Durata 1 minuto."
       ]
     },
@@ -177,9 +175,9 @@
       "attachedSpells": ["fireball"],
       "source": "TKS",
       "entries": [
-        "Può essere inserita in qualsiasi serratura.",
+        "{@b Attivazione.} Può essere inserita in qualsiasi serratura.",
         "Apre automaticamente qualsiasi serratura non magica o protetta da un incantesimo di livello pari o inferiore al bonus competenza del portatore.",
-        "Spendendo 1 carica, la serratura esplode come per l’incantesimo Palla di Fuoco (CD 18)."
+        "Spendendo {@b 1 carica}, la serratura esplode provocando l’incantesimo {@spell fireball} con {@dc 18}."
       ]
     },
     {
@@ -216,8 +214,8 @@
       "attachedSpells": ["disguise self"],
       "source": "TKS",
       "entries": [
-        "Va inserita sotto al mento.",
-        "Spendendo 1 carica, il portatore può alterare il proprio aspetto come per l’incantesimo Camuffare Sé Stesso.",
+        "{@b Attivazione.} Va inserita sotto al mento.",
+        "Spendendo {@b 1 carica}, il portatore può alterare il proprio aspetto come per l’incantesimo Camuffare Sé Stesso.",
         "Le modifiche sono tangibili e fisicamente reali.",
         "L’effetto dura 1 ora."
       ]
@@ -232,8 +230,8 @@
       "attachedSpells": ["creation"],
       "source": "TKS",
       "entries": [
-        "Non viene inserita in serrature: deve essere ruotata facendo fuoriuscire la punta come una penna.",
-        "Spendendo 1 carica, il portatore può creare un oggetto non magico di dimensioni Large o inferiori che dura 1 ora.",
+        "{@b Attivazione.} Non viene inserita in serrature: deve essere ruotata facendo fuoriuscire la punta come una penna.",
+        "Spendendo {@b 1 carica}, il portatore può creare un oggetto non magico di dimensioni Large o inferiori che dura 1 ora.",
         "Se viene creato un nuovo oggetto mentre uno precedente è ancora attivo, il primo oggetto svanisce immediatamente."
       ]
     },
@@ -247,8 +245,15 @@
       "attachedSpells": ["locate object"],
       "source": "TKS",
       "entries": [
-        "Spendendo 1 carica, il portatore percepisce la direzione della Chiave più vicina entro 10 miglia.",
-        "Spendendo 2 cariche, ne percepisce la distanza approssimativa.",
+        "{@b Attivazione.} Può essere inserita in qualsiasi superficie solida come se vi fosse una serratura invisibile.",
+        {
+          "type": "list",
+          "name": "Poteri",
+          "items": [
+            "Spendendo {@b 1 carica}, il portatore percepisce la direzione della Chiave più vicina entro 10 miglia.",
+            "Spendendo {@b 2 cariche}, ne percepisce la distanza approssimativa."
+          ]
+        },
         "Non può essere ingannata da illusioni o occultamenti inferiori al 9° livello."
       ]
     },
@@ -262,8 +267,8 @@
       "attachedSpells": ["disintegrate"],
       "source": "TKS",
       "entries": [
-        "Può essere inserita in qualsiasi serratura o struttura chiusa.",
-        "Spendendo 1 carica, genera un’esplosione distruttiva come per l’incantesimo Disintegrazione su un punto scelto."
+        "{@b Attivazione.} Può essere inserita in qualsiasi serratura o struttura chiusa.",
+        "Spendendo {@b 1 carica}, genera un’esplosione distruttiva come per l’incantesimo Disintegrazione su un punto scelto."
       ]
     },
     {
@@ -276,11 +281,17 @@
       "attachedSpells": ["time stop"],
       "source": "TKS",
       "entries": [
-        "Composta da due pezzi d’oro collegati da una lunga catena da agganciare alla vita.",
+        "{@b Attivazione.} Composta da due pezzi d’oro collegati da una lunga catena da agganciare alla vita.",
         "Il foro appare sull’orologio solo quando la chiave si avvicina.",
-        "Spendendo 1 carica, il portatore può fermare il tempo per 1 round solo per sé stesso.",
-        "Spendendo 2 cariche, può riavvolgere il tempo di 1 round.",
-        "Spendendo 3 cariche, può ottenere un turno extra immediato."
+        {
+          "type": "list",
+          "name": "Poteri",
+          "items": [
+            "Spendendo {@b 1 carica}, il portatore può fermare il tempo per 1 round solo per sé stesso.",
+            "Spendendo {@b 2 cariche}, può riavvolgere il tempo di 1 round.",
+            "Spendendo {@b 3 cariche}, può ottenere un turno extra immediato."
+          ]
+        }
       ]
     },
     {
@@ -293,9 +304,10 @@
       "attachedSpells": ["magic jar"],
       "source": "TKS",
       "entries": [
-        "Spendendo 1 carica, può estrarre l’anima di una creatura incapace o consenziente.",
+        "{@b Attivazione.} Può essere inserita in un corpo privo di anima.",
+        "Spendendo {@b 1 carica}, può estrarre l’anima di una creatura incapace o consenziente.",
         "L’anima può essere conservata per 24 ore.",
-        "Spendendo 1 carica, può inserirla in un corpo privo di anima.",
+        "Spendendo {@b 1 carica}, può inserirla in un corpo privo di anima.",
         "Se il corpo è occupato, le anime effettuano una prova di Carisma contrapposta; il vincitore mantiene il controllo."
       ]
     }
