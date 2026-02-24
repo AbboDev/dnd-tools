@@ -189,12 +189,21 @@
       "reqAttune": true,
       "charges": 3,
       "recharge": "midnight",
-      "attachedSpells": [],
       "source": "TKS",
       "entries": [
-        "Può essere utilizzata solo se inserita nella Cintura dell’Eroe.",
-        "Spendendo 1 carica, il portatore ottiene un bonus temporaneo di +4 alla Forza per 10 minuti.",
+        "{@b Attivazione.} Può essere utilizzata solo se inserita nella {@item Cintura dell’Eroe|TKS}.",
+        "Spendendo {@b 1 carica}, il portatore ottiene un bonus temporaneo di {@dice d20 + 4} alla Forza per 10 minuti.",
         "Durante la durata ha vantaggio alle prove e ai tiri salvezza su Forza."
+      ]
+    },
+    {
+      "name": "Cintura dell’Eroe",
+      "wondrous": true,
+      "rarity": "artifact",
+      "source": "TKS",
+      "entries": [
+        "Questa cintura possiede uno slot dedicato alla {@item Chiave di Ercole|TKS}.",
+        "La {@item Chiave di Ercole|TKS} può essere attivata solo quando è inserita nella cintura."
       ]
     },
     {
@@ -288,19 +297,6 @@
         "L’anima può essere conservata per 24 ore.",
         "Spendendo 1 carica, può inserirla in un corpo privo di anima.",
         "Se il corpo è occupato, le anime effettuano una prova di Carisma contrapposta; il vincitore mantiene il controllo."
-      ]
-    },
-    {
-      "name": "Cintura dell’Eroe",
-      "wondrous": true,
-      "rarity": "artifact",
-      "reqAttune": true,
-      "attachedSpells": [],
-      "source": "TKS",
-      "entries": [
-        "Questa cintura possiede uno slot dedicato alla Chiave di Ercole.",
-        "La Chiave di Ercole può essere attivata solo quando è inserita nella cintura.",
-        "La cintura non conferisce altri benefici."
       ]
     }
   ],
