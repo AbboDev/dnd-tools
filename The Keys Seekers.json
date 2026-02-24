@@ -24,7 +24,7 @@
       "recharge": "midnight",
       "attachedSpells": ["etherealness"],
       "entries": [
-        "Deve essere inserita in una serratura tracciata su una superficie solida o su uno specchio.",
+        "{@b Attivazione.} Deve essere inserita in una serratura tracciata su una superficie solida o su uno specchio.",
         "Spendendo {@b 1 carica} proietti il tuo spirito fuori dal corpo per 10 minuti.",
         "Lo spirito può muoversi fino a 18 metri dal corpo, attraversare oggetti sottili e vedere nel Piano Etereo.",
         "Il corpo rimane privo di sensi e indifeso.",
@@ -73,7 +73,7 @@
       "recharge": "midnight",
       "attachedSpells": ["fly"],
       "entries": [
-        "Deve essere inserita tra le scapole in un alloggiamento apposito o in un’armatura compatibile.",
+        "{@b Attivazione.} Deve essere inserita tra le scapole o in un’armatura compatibile.",
         "Spendendo {@b 1 carica} ottieni velocità di volo 9 metri per 10 minuti.",
         "Se l’effetto termina mentre sei in aria, planeggi fino a terra senza subire danni."
       ]
@@ -87,7 +87,7 @@
       "charges": 2,
       "recharge": "midnight",
       "entries": [
-        "Deve essere inserita in una porta o varco fisico.",
+        "{@b Attivazione.} Deve essere inserita in una porta o varco fisico.",
         "Spendendo {@b 1 carica} la porta si anima per 1 minuto.",
         "CA 15, 30 PF, morso {@damage 2d6} danni perforanti.",
         "Attacca la prima creatura che tenta di attraversarla.",
@@ -99,13 +99,49 @@
       "source": "TKS",
       "wondrous": true,
       "rarity": "artifact",
+      "baseItem": "warhammer|PHB",
+      "property": ["V"],
+      "weight": 10,
+      "weaponCategory": "martial",
+      "dmg1": "1d8",
+      "dmg2": "1d10",
+      "dmgType": "B",
+      "bonusWeapon": "+2",
+      "weapon": true,
       "reqAttune": true,
       "charges": 2,
       "recharge": "midnight",
       "entries": [
-        "Può essere inserita in qualsiasi serratura non magica.",
-        "Spendendo {@b 1 carica} si trasforma in un martello pesante per 1 minuto.",
-        "Infligge {@damage 2d8} danni contundenti.",
+        "{@b Attivazione.} Può essere inserito in qualsiasi oggetto non magico che possa diventare la testa del martello.",
+        {
+          "type": "list",
+          "name": "Poteri",
+          "items": [
+            "Spendendo {@b 1 carica} il colpo .",
+            "Spendendo {@b 1 carica} il colpo infligge 4d8 danni da tuono aggiuntivi al bersaglio."
+          ]
+        },
+        "Può essere impugnato come un {@item maul|PHB} magico +2."
+      ]
+    },
+    {
+      "name": "Chiave Martello Attivata",
+      "source": "TKS",
+      "wondrous": true,
+      "rarity": "artifact",
+      "baseItem": "Chiave Martello|PHB",
+      "weight": 50,
+      "property": ["H", "2H"],
+      "weaponCategory": "martial",
+      "dmg1": "2d6",
+      "dmgType": "B",
+      "bonusWeapon": "+2",
+      "weapon": true,
+      "reqAttune": true,
+      "charges": 2,
+      "recharge": "midnight",
+      "entries": [
+        "Può essere impugnato come un martello da guerra magico +2.",
         "Contro oggetti e strutture i danni sono raddoppiati."
       ]
     },
