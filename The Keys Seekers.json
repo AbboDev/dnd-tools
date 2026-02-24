@@ -132,13 +132,13 @@
       "source": "TKS",
       "wondrous": true,
       "rarity": "artifact",
-      "reqAttune": true,
       "charges": 1,
       "recharge": "midnight",
-      "attachedSpells": [],
+      "attachedSpells": ["summon shadowspawn"],
       "entries": [
-        "Può essere inserita esclusivamente nella Corona dell’Ombra.",
-        "Permette l’attivazione dei poteri della corona."
+        "{@b Attivazione.} Può essere utilizzata solo se inserita nella {@item Corona dell’Ombra|TKS}.",
+        "Spendendo {@b 1 carica} evochi 2 Ombre per 10 minuti.",
+        "Le Ombre obbediscono ai tuoi comandi."
       ]
     },
     {
@@ -146,13 +146,9 @@
       "source": "TKS",
       "wondrous": true,
       "rarity": "artifact",
-      "reqAttune": true,
-      "charges": 1,
-      "recharge": "midnight",
-      "attachedSpells": ["summon shadowspawn"],
       "entries": [
-        "Quando viene inserita la Chiave Ombra, spendendo 1 carica evochi 2 Ombre per 10 minuti.",
-        "Le Ombre obbediscono ai tuoi comandi."
+        "Questa corona possiede uno slot dedicato alla {@item Chiave Ombra|TKS}.",
+        "La {@item Chiave Ombra|TKS} può essere attivata solo quando è inserita nella corona."
       ]
     },
     {
