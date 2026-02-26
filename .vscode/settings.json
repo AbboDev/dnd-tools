@@ -1,0 +1,16 @@
+{
+  "json.schemaDownload.enable": true,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#1B107F",
+    "titleBar.activeBackground": "#2616B2",
+    "titleBar.activeForeground": "#FCFBFF",
+    "titleBar.inactiveBackground": "#1B107F",
+    "titleBar.inactiveForeground": "#FCFBFF",
+    "statusBar.background": "#1B107F",
+    "statusBar.foreground": "#FCFBFF",
+    "statusBar.debuggingBackground": "#1B107F",
+    "statusBar.debuggingForeground": "#FCFBFF",
+    "statusBar.noFolderBackground": "#1B107F",
+    "statusBar.noFolderForeground": "#FCFBFF"
+  }
+}
