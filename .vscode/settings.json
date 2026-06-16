@@ -1,5 +1,13 @@
 {
   "json.schemaDownload.enable": true,
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "src/**/*.json"
+      ],
+      "url": "./schema/homebrew.schema.json"
+    },
+  ],
   "workbench.colorCustomizations": {
     "activityBar.background": "#1B107F",
     "titleBar.activeBackground": "#2616B2",
