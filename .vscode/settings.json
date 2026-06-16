@@ -7,6 +7,30 @@
       ],
       "url": "./schema/homebrew.schema.json"
     },
+    {
+      "fileMatch": [
+        "src/**/bestiary/*.json"
+      ],
+      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/bestiary/bestiary.json#/$defs/creature"
+    },
+    {
+      "fileMatch": [
+        "src/**/baseitem/*.json"
+      ],
+      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items-base.json#/$defs/baseitem"
+    },
+    {
+      "fileMatch": [
+        "src/**/item/*.json"
+      ],
+      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items.json#/$defs/item"
+    },
+    {
+      "fileMatch": [
+        "src/**/spell/*.json"
+      ],
+      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/spells/spells.json#/$defs/spell"
+    }
   ],
   "workbench.colorCustomizations": {
     "activityBar.background": "#1B107F",
