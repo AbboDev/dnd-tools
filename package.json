@@ -1,0 +1,23 @@
+{
+  "name": "dnd-tools",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build:wh:dm": "node build.js -c \"Wandering Hunters\" -V dm",
+    "build:wh:player": "node build.js -c \"Wandering Hunters\" -V player"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "commander": "^14.0.3",
+    "deepmerge": "^4.3.1",
+    "fs-extra": "^11.3.3",
+    "glob": "^13.0.6"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "homebrew.schema.json",
+  "version": "0.0.1",
+  "$defs": {
+    "Item": {
+      "type": "object",
+      "properties": {
+        "_visibility": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "dm",
+              "player"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/Item"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Item"
+      }
+    }
+  ]
+}

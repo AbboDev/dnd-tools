@@ -1,0 +1,80 @@
+{
+  "name": "Shadow Ball",
+  "source": "WanderingHunters",
+  "basicRules": true,
+  "level": 0,
+  "school": "N",
+  "time": [
+    {
+      "number": 1,
+      "unit": "action"
+    }
+  ],
+  "range": {
+    "type": "point",
+    "distance": {
+      "type": "feet",
+      "amount": 60
+    }
+  },
+  "components": {
+    "s": true
+  },
+  "duration": [
+    {
+      "type": "instant"
+    }
+  ],
+  "entries": [
+    "A ball of dark energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {@damage 1d8} force damage.",
+    "The spell creates more than one ball when you reach higher levels: two balls at 5th level, three balls at 11th level, and four balls at 17th level. You can direct the balls at the same target or at different ones. Make a separate attack roll for each creature targeted."
+  ],
+  "damageInflict": [
+    "force"
+  ],
+  "spellAttack": [
+    "R"
+  ],
+  "miscTags": [
+    "SCL"
+  ],
+  "areaTags": [
+    "ST",
+    "MT"
+  ],
+  "classes": {
+    "fromClassList": [
+      {
+        "name": "Warlock",
+        "source": "WanderingHunters"
+      },
+      {
+        "name": "Wizard",
+        "source": "WanderingHunters"
+      },
+      {
+        "name": "Sorcered",
+        "source": "WanderingHunters"
+      }
+    ]
+  },
+  "optionalfeatures": [
+    {
+      "name": "Pact of the Tome",
+      "source": "PHB",
+      "featureType": [
+        "PB"
+      ]
+    }
+  ],
+  "feats": [
+    {
+      "name": "Magic Initiate",
+      "source": "PHB"
+    },
+    {
+      "name": "Spell Sniper",
+      "source": "PHB"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "name": "Bojats",
+  "size": [
+    "M"
+  ],
+  "type": "humanoid",
+  "source": "WanderingHunters",
+  "alignment": [
+    "L",
+    "E"
+  ],
+  "ac": [
+    {
+      "ac": 13,
+      "from": [
+        "{@item leather armor|phb}"
+      ]
+    }
+  ],
+  "hp": {
+    "formula": "4d8 + 8",
+    "average": 26
+  },
+  "speed": {
+    "walk": 30
+  },
+  "str": 11,
+  "dex": 14,
+  "con": 14,
+  "int": 12,
+  "wis": 12,
+  "cha": 10,
+  "passive": 13,
+  "cr": "1/2",
+  "skill": {
+    "acrobatics": "+4",
+    "stealth": "+6",
+    "perception": "+3",
+    "deception": "+2"
+  },
+  "languages": [
+    "Abyssal",
+    "Common",
+    "Undercommon"
+  ],
+  "languageTags": [
+    "AB",
+    "C",
+    "U"
+  ],
+  "senses": [
+    "darkvision 60 ft."
+  ],
+  "senseTags": [
+    "D"
+  ],
+  "resist": [
+    "necrotic",
+    "poison"
+  ],
+  "conditionImmune": [
+    "poisoned"
+  ],
+  "vulnerable": [
+    "radiant"
+  ],
+  "action": [
+    {
+      "name": "Multiattack",
+      "entries": [
+        "The Bojats makes two shortsword attacks."
+      ]
+    },
+    {
+      "name": "Shortsword",
+      "entries": [
+        "{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) slashing damage, and the target must make a {@dc 15} Constitution saving throw, taking 10 ({@damage 2d6}) poison damage on a failed save, or half as much damage on a successful one."
+      ]
+    },
+    {
+      "name": "Light Crossbow",
+      "entries": [
+        "{@atk rw} {@hit 4} to hit, range 80/320 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage, and the target must make a {@dc 15} Constitution saving throw, taking 10 ({@damage 2d6}) poison damage on a failed save, or half as much damage on a successful one."
+      ]
+    }
+  ],
+  "actionTags": [
+    "Multiattack"
+  ],
+  "miscTags": [
+    "MW",
+    "MLW",
+    "RW",
+    "RNG"
+  ],
+  "attachedItems": [
+    "light crossbow|phb",
+    "shortsword|phb"
+  ],
+  "tokenHref": {
+    "type": "external",
+    "url": "https://drive.google.com/uc?export=view&id=1-4cxG6AQgY25EM-MlP14tB9L1iLIGSWf"
+  },
+  "damageTags": [
+    "I",
+    "P",
+    "S"
+  ],
+  "savingThrowForced": [
+    "constitution"
+  ]
+}

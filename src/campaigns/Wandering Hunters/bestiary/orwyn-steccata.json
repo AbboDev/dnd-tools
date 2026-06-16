@@ -1,0 +1,144 @@
+{
+  "name": "Orwyn Steccata",
+  "source": "WanderingHunters",
+  "size": [
+    "M"
+  ],
+  "type": {
+    "type": "humanoid",
+    "sidekickType": "warrior",
+    "sidekickHidden": true
+  },
+  "ac": [
+    {
+      "ac": 18,
+      "from": [
+        "{@item breastplate|phb}",
+        "{@item shield|phb}"
+      ]
+    }
+  ],
+  "hp": {
+    "formula": "6d10 + 12",
+    "average": 45
+  },
+  "speed": {
+    "walk": 30
+  },
+  "str": 15,
+  "dex": 16,
+  "con": 14,
+  "int": 14,
+  "wis": 12,
+  "cha": 10,
+  "save": {
+    "con": "+4"
+  },
+  "skill": {
+    "survival": "+3",
+    "perception": "+3",
+    "stealth": "+5",
+    "athletics": "+4"
+  },
+  "passive": 13,
+  "languages": [
+    "Common"
+  ],
+  "trait": [
+    {
+      "name": "Battle Readiness",
+      "entries": [
+        "The warrior has advantage on initiative rolls."
+      ]
+    },
+    {
+      "name": "Improved Critical",
+      "entries": [
+        "The warrior's attack rolls score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+      ]
+    },
+    {
+      "name": "Martial Role",
+      "entries": [
+        "The warrior gains a +2 bonus to attack rolls."
+      ]
+    }
+  ],
+  "action": [
+    {
+      "name": "Extra Attack",
+      "entries": [
+        "The warrior can attack twice, instead of once, whenever it takes the {@action Attack} action on its turn."
+      ]
+    },
+    {
+      "name": "Longsword",
+      "entries": [
+        "{@atk mw} {@hit +4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) slashing damage."
+      ]
+    },
+    {
+      "name": "Heavy Crossbow",
+      "entries": [
+        "{@atk rw} {@hit +5} to hit, range 100/400 ft., one target. {@h}8 ({@damage 1d10 + 3}) piercing damage."
+      ]
+    }
+  ],
+  "languageTags": [
+    "C"
+  ],
+  "tokenUrl": "https://5e.tools/img/SLW/Warrior.png",
+  "alignment": [
+    "N",
+    "E"
+  ],
+  "cr": "3",
+  "level": 5,
+  "miscTags": [
+    "MW",
+    "MLW",
+    "RW"
+  ],
+  "attachedItems": [
+    "heavy crossbow|phb",
+    "longsword|phb"
+  ],
+  "spellcasting": [
+    {
+      "name": "Spellcasting",
+      "headerEntries": [
+        "Orwyn studied a lot to bend the magic. His spellcasting ability is Intelligence. It can innately cast the spells, requiring no components:"
+      ],
+      "spells": {
+        "0": {
+          "spells": [
+            "{@spell lightning lure|TCE}",
+            "{@spell mage hand}"
+          ]
+        }
+      },
+      "daily": {
+        "2": [
+          "{@spell Jim's magic missile|AI}",
+          "{@spell shield}"
+        ]
+      },
+      "ability": "int",
+      "type": "spellcasting"
+    }
+  ],
+  "spellcastingTags": [
+    "O"
+  ],
+  "damageTags": [
+    "P",
+    "S"
+  ],
+  "damageTagsSpell": [
+    "L",
+    "O"
+  ],
+  "savingThrowForcedSpell": [
+    "strength"
+  ]
+}

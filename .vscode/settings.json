@@ -1,0 +1,48 @@
+{
+  "json.schemaDownload.enable": true,
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "src/**/*.json"
+      ],
+      "url": "./schema/homebrew.schema.json"
+    },
+    {
+      "fileMatch": [
+        "src/**/bestiary/*.json"
+      ],
+      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/bestiary/bestiary.json#/$defs/creature"
+    },
+    {
+      "fileMatch": [
+        "src/**/baseitem/*.json"
+      ],
+      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items-base.json#/$defs/baseitem"
+    },
+    {
+      "fileMatch": [
+        "src/**/item/*.json"
+      ],
+      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items.json#/$defs/item"
+    },
+    {
+      "fileMatch": [
+        "src/**/spell/*.json"
+      ],
+      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/spells/spells.json#/$defs/spell"
+    }
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#1B107F",
+    "titleBar.activeBackground": "#2616B2",
+    "titleBar.activeForeground": "#FCFBFF",
+    "titleBar.inactiveBackground": "#1B107F",
+    "titleBar.inactiveForeground": "#FCFBFF",
+    "statusBar.background": "#1B107F",
+    "statusBar.foreground": "#FCFBFF",
+    "statusBar.debuggingBackground": "#1B107F",
+    "statusBar.debuggingForeground": "#FCFBFF",
+    "statusBar.noFolderBackground": "#1B107F",
+    "statusBar.noFolderForeground": "#FCFBFF"
+  }
+}

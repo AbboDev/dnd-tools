@@ -1,0 +1,161 @@
+{
+  "name": "Bojats Assassino posseduto",
+  "source": "WanderingHunters",
+  "size": [
+    "M"
+  ],
+  "type": "humanoid",
+  "alignment": [
+    "L",
+    "E"
+  ],
+  "ac": [
+    {
+      "ac": 15,
+      "from": [
+        "{@item studded leather armor|phb|studded leather}"
+      ]
+    }
+  ],
+  "hp": {
+    "formula": "7d8 + 21",
+    "average": 52
+  },
+  "speed": {
+    "walk": 30
+  },
+  "str": 15,
+  "dex": 18,
+  "con": 16,
+  "int": 10,
+  "wis": 16,
+  "cha": 8,
+  "save": {
+    "dex": "+6"
+  },
+  "skill": {
+    "acrobatics": "+9",
+    "perception": "+5",
+    "stealth": "+9",
+    "deception": "+7",
+    "intimidation": "+2"
+  },
+  "passive": 15,
+  "languages": [
+    "Abyssal",
+    "Common",
+    "Undercommon"
+  ],
+  "cr": "6",
+  "trait": [
+    {
+      "name": "Assassinate",
+      "entries": [
+        "During its first turn, the assassin has advantage on attack rolls against any creature that hasn't taken a turn. Any hit the assassin scores against a {@status surprised} creature is a critical hit."
+      ]
+    },
+    {
+      "name": "Sneak Attack (1/Turn)",
+      "entries": [
+        "The assassin deals an extra 14 ({@damage 3d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the assassin that isn't {@condition incapacitated} and the assassin doesn't have disadvantage on the attack roll."
+      ]
+    },
+    {
+      "name": "Frightful Presence (Red Glom)",
+      "entries": [
+        "Each creature who see a Possessed Bojats must succeed on a {@dc 11} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, with disadvantage if the Bojats is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the bojats's Frightful Presence for the next 24 hours."
+      ]
+    },
+    {
+      "name": "Red Glom Possession",
+      "entries": [
+        "A creature possessed by a Red Glom, obtain +4 to Strength, +2 to Dexterity, Constitution and Wisdom, -4 to Intelligence and Charisma.",
+        "They become immune to the {@condition paralyzed} conditioned, gain proficiency in intimidation skill and lost the ability to speak, except for screaming."
+      ]
+    }
+  ],
+  "action": [
+    {
+      "name": "Multiattack",
+      "entries": [
+        "The assassin makes two shortsword or Poisoned Fist attacks."
+      ]
+    },
+    {
+      "name": "Shortsword",
+      "entries": [
+        "{@atk mw} {@hit 7} to hit, range 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage, and the target must make a {@dc 15} Constitution saving throw, taking 10 ({@damage 3d6}) poison damage on a failed save, or half as much damage on a successful one."
+      ]
+    },
+    {
+      "name": "Poisoned Fist",
+      "entries": [
+        "{@atk mw} {@hit +5} to hit, reach 5 ft., one target. {@h}14 ({@damage 1d6 + 2}) and the target must make a {@dc 15} Constitution saving throw, taking 10 ({@damage 3d6}) poison damage on a failed save, or half as much damage on a successful one."
+      ]
+    }
+  ],
+  "attachedItems": [
+    "shortsword|phb"
+  ],
+  "traitTags": [
+    "Sneak Attack"
+  ],
+  "actionTags": [
+    "Multiattack"
+  ],
+  "languageTags": [
+    "AB",
+    "C",
+    "U"
+  ],
+  "miscTags": [
+    "MW",
+    "MLW"
+  ],
+  "hasFluff": true,
+  "hasFluffImages": true,
+  "immune": [
+    "poison"
+  ],
+  "resist": [
+    "necrotic"
+  ],
+  "vulnerable": [
+    "radiant"
+  ],
+  "conditionImmune": [
+    "paralyzed",
+    "poisoned"
+  ],
+  "tokenHref": {
+    "type": "external",
+    "url": "https://drive.google.com/uc?export=view&id=1-4cxG6AQgY25EM-MlP14tB9L1iLIGSWf"
+  },
+  "senses": [
+    "darkvision 60 ft."
+  ],
+  "senseTags": [
+    "D"
+  ],
+  "shortName": "Bojats Assassino",
+  "conditionInflict": [
+    "frightened"
+  ],
+  "bonus": [
+    {
+      "name": "Powerfull Punch",
+      "entries": [
+        "If the Bojats hits a target with a Poisoned Fist attack, it must succeed on a {@dc 15} Strength saving throw or be pushed 5 feet away from the Bojats."
+      ]
+    }
+  ],
+  "damageTags": [
+    "I",
+    "P"
+  ],
+  "savingThrowForced": [
+    "constitution",
+    "strength",
+    "wisdom"
+  ]
+}
