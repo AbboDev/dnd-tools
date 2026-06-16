@@ -7,7 +7,8 @@
     "node": ">=20"
   },
   "scripts": {
-    "build": "node build.js"
+    "build:wh:dm": "node build.js -c \"Wandering Hunters\" -V dm",
+    "build:wh:player": "node build.js -c \"Wandering Hunters\" -V player"
   },
   "keywords": [],
   "author": "",

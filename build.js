@@ -21,11 +21,11 @@ const OUTPUT_DIR = "./builds";
 const OUTPUT_FILE = `${OUTPUT_DIR}/${args.output}.${args.visibility}.json`;
 
 const CATEGORIES = {
-    item: "item",
-    bestiary: "monster",
-    spell: "spell",
-    baseitem: "baseitem"
-  };
+  item: "item",
+  bestiary: "monster",
+  spell: "spell",
+  baseitem: "baseitem"
+};
 
 async function build() {
   const campaignPath = `${SRC_BASE}/campaigns/${args.campaign}`;
