@@ -1,6 +1,8 @@
 import fs from "fs-extra";
 import * as glob from "glob";
+import semver from "semver";
 import { Command, Option } from "commander";
+import { compareBuilds } from "./src/helpers/compareBuilds.js";
 
 const program = new Command();
 
@@ -12,6 +14,7 @@ program
   .addOption(new Option('-e, --edition <size>', 'Edition for output').choices(['classic', 'one']).default('classic', 'for classic'))
   .addOption(new Option('-V, --visibility <size>', 'Visibility for output').choices(['dm', 'player']).default('dm', 'for dm'))
   .addOption(new Option('--status <size>', 'Status for output').choices(["ready", "wip", "invalid", "deprecated"]).default('wip', 'for wip'))
+  .option('--update', 'Updates the version of the campaign')
   .parse(process.argv);
 
 const args = program.opts();
@@ -80,6 +83,18 @@ async function build() {
 
     if (merged.length) {
       output[finalKey] = merged;
+    }
+  }
+
+  if (args.update) {
+    const oldBuild = await fs.readJson(OUTPUT_FILE);
+
+    if (oldBuild) {
+      const versionBump = compareBuilds(oldBuild, output);
+
+      output._meta.sources[0].version = semver.inc(output._meta.sources[0].version, versionBump);
+
+      await fs.outputJson(`${campaignPath}/_meta.json`, output._meta.sources[0], { spaces: 2 });
     }
   }
 
