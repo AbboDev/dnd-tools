@@ -10,7 +10,11 @@
     "build:wh:dm": "node build.js -c \"Wandering Hunters\" -V dm",
     "build:wh:player": "node build.js -c \"Wandering Hunters\" -V player",
     "publish:wh:dm": "npm run build:wh:dm -- --update",
-    "publish:wh:player": "npm run build:wh:player -- --update"
+    "publish:wh:player": "npm run build:wh:player -- --update",
+    "build:tks:dm": "node build.js -c \"The Keys Seekers\" -V dm",
+    "build:tks:player": "node build.js -c \"The Keys Seekers\" -V player",
+    "publish:tks:dm": "npm run build:tks:dm -- --update",
+    "publish:tks:player": "npm run build:tks:player -- --update"
   },
   "keywords": [],
   "author": "",

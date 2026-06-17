@@ -1,0 +1,122 @@
+{
+  "type": "section",
+  "name": "Fazioni del Continente",
+  "entries": [
+    {
+      "type": "section",
+      "name": "I Cercatori del Corno",
+      "entries": [
+        "Avventurieri organizzati in piccoli gruppi di quattro membri, uniti dalla ricerca del leggendario Corno di Maar.",
+        {
+          "type": "entries",
+          "name": "Organizzazione",
+          "entries": [
+            "Operano in cellule autonome di quattro individui.",
+            "Le informazioni vengono condivise tramite reti informali tra gruppi."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Atteggiamento",
+          "entries": [
+            "Generalmente amichevoli verso altri avventurieri.",
+            "Sempre alla ricerca di informazioni riguardanti il Corno di Maar."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "name": "I Raccoglitori di Chiavi",
+      "entries": [
+        "Gruppi di quattro individui dedicati alla raccolta delle chiavi leggendarie sparse nel continente.",
+        {
+          "type": "entries",
+          "name": "Organizzazione",
+          "entries": [
+            "Operano in piccoli gruppi mobili.",
+            "Mantengono contatti costanti con altri raccoglitori."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Atteggiamento",
+          "entries": [
+            "Amichevoli verso altri avventurieri.",
+            "Estremamente avidi di informazioni sulle chiavi.",
+            "La loro leggenda è la più viva tra tutte le fazioni."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "name": "Le Cappe Bianche",
+      "entries": [
+        "Il gruppo armato più pericoloso del continente.",
+        {
+          "type": "entries",
+          "name": "Ideologia",
+          "entries": [
+            "Agiscono nel nome del 'vero potere divino'.",
+            "Rigettano ogni forma di magia arcana, ritenuta corrotta e maligna."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Struttura Operativa",
+          "entries": [
+            "Le avanguardie viaggiano in coppia.",
+            "Gruppi armati più numerosi seguono sempre a distanza."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "name": "Gli Amici del Lupo",
+      "entries": [
+        "Individui solitari e diffidenti che vagano per il continente evitando la società.",
+        {
+          "type": "entries",
+          "name": "Caratteristiche",
+          "entries": [
+            "Spesso identificati come alpha di un branco di lupi.",
+            "Raramente attaccano se non provocati."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Competenze",
+          "entries": [
+            "Profonda conoscenza della natura.",
+            "Esperti del territorio e dei percorsi selvaggi."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "name": "Il Grande Mercato Itinerante",
+      "entries": [
+        "Una vasta carovana mercantile composta da oltre cinquanta carri.",
+        {
+          "type": "entries",
+          "name": "Attività",
+          "entries": [
+            "Viaggiano nella parte sud dell'isola.",
+            "Si spostano di città in città per commerciare."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Reputazione",
+          "entries": [
+            "Gruppo pacifico.",
+            "Ben accolto nelle città del sud."
+          ]
+        }
+      ]
+    }
+  ]
+}
