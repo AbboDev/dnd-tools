@@ -1,6 +1,7 @@
 import fs from "fs-extra";
 import * as glob from "glob";
 import semver from "semver";
+import path from "path";
 import { Command, Option } from "commander";
 import { compareBuilds } from "./src/helpers/compareBuilds.js";
 
@@ -96,9 +97,10 @@ async function build() {
     if (oldBuild) {
       const versionBump = compareBuilds(oldBuild, output);
 
-      output._meta.sources[0].version = semver.inc(output._meta.sources[0].version, versionBump);
+      const newVersion = semver.inc(output._meta.sources[0].version, versionBump);
+      output._meta.sources[0].version = newVersion;
 
-      await fs.outputJson(`${campaignPath}/_meta.json`, output._meta.sources[0], { spaces: 2 });
+      await fs.outputJson(`${campaignPath}/_meta.json`, {...meta, version: newVersion}, { spaces: 2 });
     }
   }
 

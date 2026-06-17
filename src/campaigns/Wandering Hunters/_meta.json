@@ -1,7 +1,7 @@
 {
   "json": "WanderingHunters",
-  "abbreviation": "WH-DM",
-  "full": "Wandering Hunters (DM)",
+  "abbreviation": "WH",
+  "full": "Wandering Hunters",
   "version": "0.0.2",
   "authors": [
     "Abbo"
