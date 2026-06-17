@@ -6,8 +6,9 @@
   ],
   "type": {
     "type": "humanoid",
-    "sidekickType": "warrior",
-    "sidekickHidden": true
+    "tags": [
+      "Human"
+    ]
   },
   "ac": [
     {
@@ -48,19 +49,19 @@
     {
       "name": "Battle Readiness",
       "entries": [
-        "The warrior has advantage on initiative rolls."
+        "Orwyn has advantage on initiative rolls."
       ]
     },
     {
       "name": "Improved Critical",
       "entries": [
-        "The warrior's attack rolls score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+        "Orwyn's attack rolls score a critical hit on a roll of 19 or 20 on the {@dice d20}."
       ]
     },
     {
       "name": "Martial Role",
       "entries": [
-        "The warrior gains a +2 bonus to attack rolls."
+        "Orwyn gains a +2 bonus to attack rolls."
       ]
     }
   ],
@@ -68,7 +69,7 @@
     {
       "name": "Extra Attack",
       "entries": [
-        "The warrior can attack twice, instead of once, whenever it takes the {@action Attack} action on its turn."
+        "Orwyn can attack twice, instead of once, whenever it takes the {@action Attack} action on its turn."
       ]
     },
     {
@@ -87,7 +88,6 @@
   "languageTags": [
     "C"
   ],
-  "tokenUrl": "https://5e.tools/img/SLW/Warrior.png",
   "alignment": [
     "N",
     "E"

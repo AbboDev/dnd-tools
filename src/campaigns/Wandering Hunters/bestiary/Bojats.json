@@ -1,0 +1,554 @@
+[
+  {
+    "name": "Bojats",
+    "size": [
+      "M"
+    ],
+    "type": "humanoid",
+    "source": "WanderingHunters",
+    "alignment": [
+      "L",
+      "E"
+    ],
+    "ac": [
+      {
+        "ac": 13,
+        "from": [
+          "{@item leather armor|phb}"
+        ]
+      }
+    ],
+    "hp": {
+      "formula": "4d8 + 8",
+      "average": 26
+    },
+    "speed": {
+      "walk": 30
+    },
+    "str": 11,
+    "dex": 14,
+    "con": 14,
+    "int": 12,
+    "wis": 12,
+    "cha": 10,
+    "passive": 13,
+    "cr": "1/2",
+    "skill": {
+      "acrobatics": "+4",
+      "stealth": "+6",
+      "perception": "+3",
+      "deception": "+2"
+    },
+    "languages": [
+      "Abyssal",
+      "Common",
+      "Undercommon"
+    ],
+    "languageTags": [
+      "AB",
+      "C",
+      "U"
+    ],
+    "senses": [
+      "darkvision 60 ft."
+    ],
+    "senseTags": [
+      "D"
+    ],
+    "resist": [
+      "necrotic",
+      "poison"
+    ],
+    "conditionImmune": [
+      "poisoned"
+    ],
+    "vulnerable": [
+      "radiant"
+    ],
+    "action": [
+      {
+        "name": "Multiattack",
+        "entries": [
+          "The Bojats makes two shortsword attacks."
+        ]
+      },
+      {
+        "name": "Shortsword",
+        "entries": [
+          "{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) slashing damage, and the target must make a {@dc 15} Constitution saving throw, taking 10 ({@damage 2d6}) poison damage on a failed save, or half as much damage on a successful one."
+        ]
+      },
+      {
+        "name": "Light Crossbow",
+        "entries": [
+          "{@atk rw} {@hit 4} to hit, range 80/320 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage, and the target must make a {@dc 15} Constitution saving throw, taking 10 ({@damage 2d6}) poison damage on a failed save, or half as much damage on a successful one."
+        ]
+      }
+    ],
+    "actionTags": [
+      "Multiattack"
+    ],
+    "miscTags": [
+      "MW",
+      "MLW",
+      "RW",
+      "RNG"
+    ],
+    "attachedItems": [
+      "light crossbow|phb",
+      "shortsword|phb"
+    ],
+    "tokenHref": {
+      "type": "external",
+      "url": "https://drive.google.com/uc?export=view&id=1-4cxG6AQgY25EM-MlP14tB9L1iLIGSWf"
+    },
+    "damageTags": [
+      "I",
+      "P",
+      "S"
+    ],
+    "savingThrowForced": [
+      "constitution"
+    ]
+  },
+  {
+    "name": "Bojats posseduto",
+    "size": [
+      "M"
+    ],
+    "type": "humanoid",
+    "source": "WanderingHunters",
+    "alignment": [
+      "L",
+      "E"
+    ],
+    "ac": [
+      {
+        "ac": 13,
+        "from": [
+          "{@item leather armor|phb}"
+        ]
+      }
+    ],
+    "hp": {
+      "formula": "4d8 + 12",
+      "average": 30
+    },
+    "speed": {
+      "walk": 30
+    },
+    "str": 15,
+    "dex": 16,
+    "con": 16,
+    "int": 8,
+    "wis": 14,
+    "cha": 6,
+    "passive": 14,
+    "cr": "1",
+    "skill": {
+      "acrobatics": "+5",
+      "stealth": "+7",
+      "perception": "+4",
+      "deception": "+2",
+      "intimidation": "+2"
+    },
+    "languages": [
+      "understands Abyssal",
+      "Common and Undercommon",
+      "but can't speak"
+    ],
+    "languageTags": [
+      "AB",
+      "C",
+      "U",
+      "CS"
+    ],
+    "senses": [
+      "darkvision 60 ft."
+    ],
+    "senseTags": [
+      "D"
+    ],
+    "resist": [
+      "necrotic",
+      "poison"
+    ],
+    "conditionImmune": [
+      "paralyzed",
+      "poisoned"
+    ],
+    "vulnerable": [
+      "radiant"
+    ],
+    "action": [
+      {
+        "name": "Multiattack",
+        "entries": [
+          "The Bojats makes two shortsword or Poisoned Fist attacks."
+        ]
+      },
+      {
+        "name": "Shortsword",
+        "entries": [
+          "{@atk mw} {@hit 5} to hit, range 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must make a {@dc 15} Constitution saving throw, taking 10 ({@damage 2d6}) poison damage on a failed save, or half as much damage on a successful one."
+        ]
+      },
+      {
+        "name": "Poisoned Fist",
+        "entries": [
+          "{@atk mw} {@hit +4} to hit, reach 5 ft., one target. {@h}14 ({@damage 1d6 + 2}) and the target must make a {@dc 15} Constitution saving throw, taking 10 ({@damage 2d6}) poison damage on a failed save, or half as much damage on a successful one."
+        ]
+      }
+    ],
+    "actionTags": [
+      "Frightful Presence",
+      "Multiattack"
+    ],
+    "miscTags": [
+      "MW",
+      "MLW"
+    ],
+    "attachedItems": [
+      "shortsword|phb"
+    ],
+    "tokenHref": {
+      "type": "external",
+      "url": "https://drive.google.com/uc?export=view&id=1-4cxG6AQgY25EM-MlP14tB9L1iLIGSWf"
+    },
+    "shortName": "Bojats",
+    "trait": [
+      {
+        "name": "Frightful Presence (Red Glom)",
+        "entries": [
+          "Each creature who see a Possessed Bojats must succeed on a {@dc 11} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, with disadvantage if the Bojats is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the bojats's Frightful Presence for the next 24 hours."
+        ]
+      },
+      {
+        "name": "Red Glom Possession",
+        "entries": [
+          "A creature possessed by a Red Glom, obtain +4 to Strength, +2 to Dexterity, Constitution and Wisdom, -4 to Intelligence and Charisma.",
+          "They become immune to the {@condition paralyzed} conditioned, gain proficiency in intimidation skill and lost the ability to speak, except for screaming."
+        ]
+      }
+    ],
+    "conditionInflict": [
+      "frightened"
+    ],
+    "traitTags": [
+      "Beast of Burden"
+    ],
+    "bonus": [
+      {
+        "name": "Powerfull Punch",
+        "entries": [
+          "If the Bojats hits a target with a Poisoned Fist attack, it must succeed on a {@dc 14} Strength saving throw or be pushed 5 feet away from the Bojats."
+        ]
+      }
+    ],
+    "damageTags": [
+      "I",
+      "P"
+    ],
+    "savingThrowForced": [
+      "constitution",
+      "strength",
+      "wisdom"
+    ]
+  },
+  {
+    "name": "Bojats Assassino",
+    "source": "WanderingHunters",
+    "size": [
+      "M"
+    ],
+    "type": "humanoid",
+    "alignment": [
+      "L",
+      "E"
+    ],
+    "ac": [
+      {
+        "ac": 15,
+        "from": [
+          "{@item studded leather armor|phb|studded leather}"
+        ]
+      }
+    ],
+    "hp": {
+      "formula": "7d8 + 14",
+      "average": 45
+    },
+    "speed": {
+      "walk": 30
+    },
+    "str": 11,
+    "dex": 16,
+    "con": 14,
+    "int": 14,
+    "wis": 14,
+    "cha": 12,
+    "save": {
+      "dex": "+6"
+    },
+    "skill": {
+      "acrobatics": "+6",
+      "perception": "+5",
+      "deception": "+4",
+      "stealth": "+9"
+    },
+    "passive": 15,
+    "languages": [
+      "Abyssal",
+      "Common",
+      "Undercommon"
+    ],
+    "cr": "5",
+    "trait": [
+      {
+        "name": "Assassinate",
+        "entries": [
+          "During its first turn, the assassin has advantage on attack rolls against any creature that hasn't taken a turn. Any hit the assassin scores against a {@status surprised} creature is a critical hit."
+        ]
+      },
+      {
+        "name": "Sneak Attack (1/Turn)",
+        "entries": [
+          "The assassin deals an extra 14 ({@damage 3d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the assassin that isn't {@condition incapacitated} and the assassin doesn't have disadvantage on the attack roll."
+        ]
+      }
+    ],
+    "action": [
+      {
+        "name": "Multiattack",
+        "entries": [
+          "The assassin makes two shortsword attacks."
+        ]
+      },
+      {
+        "name": "Shortsword",
+        "entries": [
+          "{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must make a {@dc 15} Constitution saving throw, taking 10 ({@damage 3d6}) poison damage on a failed save, or half as much damage on a successful one."
+        ]
+      },
+      {
+        "name": "Light Crossbow",
+        "entries": [
+          "{@atk rw} {@hit 6} to hit, range 80/320 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage, and the target must make a {@dc 15} Constitution saving throw, taking 10 ({@damage 3d6}) poison damage on a failed save, or half as much damage on a successful one."
+        ]
+      }
+    ],
+    "attachedItems": [
+      "light crossbow|phb",
+      "shortsword|phb"
+    ],
+    "traitTags": [
+      "Sneak Attack"
+    ],
+    "actionTags": [
+      "Multiattack"
+    ],
+    "languageTags": [
+      "AB",
+      "C",
+      "U"
+    ],
+    "miscTags": [
+      "MW",
+      "MLW",
+      "RW",
+      "RNG"
+    ],
+    "hasFluff": true,
+    "hasFluffImages": true,
+    "immune": [
+      "poison"
+    ],
+    "resist": [
+      "necrotic"
+    ],
+    "vulnerable": [
+      "radiant"
+    ],
+    "conditionImmune": [
+      "poisoned"
+    ],
+    "tokenHref": {
+      "type": "external",
+      "url": "https://drive.google.com/uc?export=view&id=1-4cxG6AQgY25EM-MlP14tB9L1iLIGSWf"
+    },
+    "senses": [
+      "darkvision 60 ft."
+    ],
+    "senseTags": [
+      "D"
+    ],
+    "damageTags": [
+      "I",
+      "P"
+    ],
+    "savingThrowForced": [
+      "constitution"
+    ]
+  },
+  {
+    "name": "Bojats Assassino posseduto",
+    "source": "WanderingHunters",
+    "size": [
+      "M"
+    ],
+    "type": "humanoid",
+    "alignment": [
+      "L",
+      "E"
+    ],
+    "ac": [
+      {
+        "ac": 15,
+        "from": [
+          "{@item studded leather armor|phb|studded leather}"
+        ]
+      }
+    ],
+    "hp": {
+      "formula": "7d8 + 21",
+      "average": 52
+    },
+    "speed": {
+      "walk": 30
+    },
+    "str": 15,
+    "dex": 18,
+    "con": 16,
+    "int": 10,
+    "wis": 16,
+    "cha": 8,
+    "save": {
+      "dex": "+6"
+    },
+    "skill": {
+      "acrobatics": "+9",
+      "perception": "+5",
+      "stealth": "+9",
+      "deception": "+7",
+      "intimidation": "+2"
+    },
+    "passive": 15,
+    "languages": [
+      "Abyssal",
+      "Common",
+      "Undercommon"
+    ],
+    "cr": "6",
+    "trait": [
+      {
+        "name": "Assassinate",
+        "entries": [
+          "During its first turn, the assassin has advantage on attack rolls against any creature that hasn't taken a turn. Any hit the assassin scores against a {@status surprised} creature is a critical hit."
+        ]
+      },
+      {
+        "name": "Sneak Attack (1/Turn)",
+        "entries": [
+          "The assassin deals an extra 14 ({@damage 3d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the assassin that isn't {@condition incapacitated} and the assassin doesn't have disadvantage on the attack roll."
+        ]
+      },
+      {
+        "name": "Frightful Presence (Red Glom)",
+        "entries": [
+          "Each creature who see a Possessed Bojats must succeed on a {@dc 11} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, with disadvantage if the Bojats is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the bojats's Frightful Presence for the next 24 hours."
+        ]
+      },
+      {
+        "name": "Red Glom Possession",
+        "entries": [
+          "A creature possessed by a Red Glom, obtain +4 to Strength, +2 to Dexterity, Constitution and Wisdom, -4 to Intelligence and Charisma.",
+          "They become immune to the {@condition paralyzed} conditioned, gain proficiency in intimidation skill and lost the ability to speak, except for screaming."
+        ]
+      }
+    ],
+    "action": [
+      {
+        "name": "Multiattack",
+        "entries": [
+          "The assassin makes two shortsword or Poisoned Fist attacks."
+        ]
+      },
+      {
+        "name": "Shortsword",
+        "entries": [
+          "{@atk mw} {@hit 7} to hit, range 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage, and the target must make a {@dc 15} Constitution saving throw, taking 10 ({@damage 3d6}) poison damage on a failed save, or half as much damage on a successful one."
+        ]
+      },
+      {
+        "name": "Poisoned Fist",
+        "entries": [
+          "{@atk mw} {@hit +5} to hit, reach 5 ft., one target. {@h}14 ({@damage 1d6 + 2}) and the target must make a {@dc 15} Constitution saving throw, taking 10 ({@damage 3d6}) poison damage on a failed save, or half as much damage on a successful one."
+        ]
+      }
+    ],
+    "attachedItems": [
+      "shortsword|phb"
+    ],
+    "traitTags": [
+      "Sneak Attack"
+    ],
+    "actionTags": [
+      "Multiattack"
+    ],
+    "languageTags": [
+      "AB",
+      "C",
+      "U"
+    ],
+    "miscTags": [
+      "MW",
+      "MLW"
+    ],
+    "hasFluff": true,
+    "hasFluffImages": true,
+    "immune": [
+      "poison"
+    ],
+    "resist": [
+      "necrotic"
+    ],
+    "vulnerable": [
+      "radiant"
+    ],
+    "conditionImmune": [
+      "paralyzed",
+      "poisoned"
+    ],
+    "tokenHref": {
+      "type": "external",
+      "url": "https://drive.google.com/uc?export=view&id=1-4cxG6AQgY25EM-MlP14tB9L1iLIGSWf"
+    },
+    "senses": [
+      "darkvision 60 ft."
+    ],
+    "senseTags": [
+      "D"
+    ],
+    "shortName": "Bojats Assassino",
+    "conditionInflict": [
+      "frightened"
+    ],
+    "bonus": [
+      {
+        "name": "Powerfull Punch",
+        "entries": [
+          "If the Bojats hits a target with a Poisoned Fist attack, it must succeed on a {@dc 15} Strength saving throw or be pushed 5 feet away from the Bojats."
+        ]
+      }
+    ],
+    "damageTags": [
+      "I",
+      "P"
+    ],
+    "savingThrowForced": [
+      "constitution",
+      "strength",
+      "wisdom"
+    ]
+  }
+]

@@ -1,0 +1,235 @@
+[
+  {
+    "name": "Phebe, cavaliere impavida",
+    "source": "WanderingHunters",
+    "size": [
+      "M"
+    ],
+    "type": {
+      "type": "humanoid",
+      "tags": [
+        "Human"
+      ]
+    },
+    "alignment": [
+      "L",
+      "N"
+    ],
+    "ac": [
+      {
+        "ac": 18,
+        "from": [
+          "{@item plate armor|phb}"
+        ]
+      }
+    ],
+    "hp": {
+      "formula": "8d8 + 24",
+      "average": 60
+    },
+    "speed": {
+      "walk": 30
+    },
+    "str": 18,
+    "dex": 10,
+    "con": 16,
+    "int": 12,
+    "wis": 10,
+    "cha": 12,
+    "save": {
+      "wis": "+3",
+      "con": "+6"
+    },
+    "passive": 10,
+    "languages": [
+      "Common"
+    ],
+    "cr": "5",
+    "trait": [
+      {
+        "name": "Anti spell",
+        "entries": [
+          "When Phebe is wearing the armour, any ongoing spell of level 3 or lower on the target is vanish."
+        ]
+      }
+    ],
+    "action": [
+      {
+        "name": "Multiattack",
+        "entries": [
+          "Phebe makes two melee attacks."
+        ]
+      },
+      {
+        "name": "Battleaxe",
+        "entries": [
+          "{@atk mw} {@hit +7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d10 + 4}) slashing damage."
+        ]
+      }
+    ],
+    "reaction": [
+      {
+        "name": "Parry",
+        "entries": [
+          "Phebe adds 2 to its AC against one melee attack that would hit it. To do so, Phebe must see the attacker and be wielding a melee weapon."
+        ]
+      }
+    ],
+    "attachedItems": [
+      "battleaxe|phb"
+    ],
+    "actionTags": [
+      "Multiattack",
+      "Parry"
+    ],
+    "languageTags": [
+      "C"
+    ],
+    "miscTags": [
+      "MW",
+      "MLW"
+    ],
+    "token": {
+      "name": "Knight",
+      "source": "MM"
+    },
+    "shortName": "Pebhe",
+    "skill": {
+      "survival": "+3",
+      "intimidation": "+4"
+    },
+    "resist": [
+      {
+        "resist": [
+          "cold",
+          "fire",
+          "lightning"
+        ],
+        "preNote": "When wearing armour"
+      }
+    ],
+    "damageTags": [
+      "S"
+    ]
+  },
+  {
+    "name": "Pebhe posseduta",
+    "size": [
+      "M"
+    ],
+    "type": {
+      "type": "humanoid",
+      "tags": [
+        "Human"
+      ]
+    },
+    "source": "WanderingHunters",
+    "alignment": [
+      "C",
+      "E"
+    ],
+    "ac": [
+      {
+        "ac": 18,
+        "from": [
+          "{@item plate armor|xphb}"
+        ]
+      }
+    ],
+    "hp": {
+      "formula": "8d8 + 32",
+      "average": 68
+    },
+    "speed": {
+      "walk": 30
+    },
+    "str": 22,
+    "dex": 10,
+    "con": 18,
+    "int": 6,
+    "wis": 12,
+    "cha": 6,
+    "passive": 11,
+    "cr": "5",
+    "shortName": "Pebhe posseduta",
+    "save": {
+      "con": "+7",
+      "wis": "+4"
+    },
+    "skill": {
+      "intimidation": "+1",
+      "survival": "+4"
+    },
+    "vulnerable": [
+      "radiant"
+    ],
+    "resist": [
+      {
+        "resist": [
+          "cold",
+          "fire",
+          "lightning"
+        ],
+        "preNote": "When wearing armour"
+      },
+      {
+        "resist": [
+          "necrotic"
+        ]
+      }
+    ],
+    "languages": [
+      "Common"
+    ],
+    "languageTags": [
+      "C"
+    ],
+    "trait": [
+      {
+        "name": "Anti spell",
+        "entries": [
+          "When Phebe is wearing the armour, any ongoing spell of level 3 or lower on the target is vanish."
+        ]
+      }
+    ],
+    "action": [
+      {
+        "name": "Multiattack",
+        "entries": [
+          "Phebe makes two melee attacks."
+        ]
+      },
+      {
+        "name": "Fury attack (1/Day)",
+        "entries": [
+          "Phebe can make a third melee attack."
+        ]
+      },
+      {
+        "name": "Battleaxe",
+        "entries": [
+          "{@atk mw} {@hit +7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d10 + 4}) slashing damage."
+        ]
+      }
+    ],
+    "actionTags": [
+      "Multiattack",
+      "Parry"
+    ],
+    "miscTags": [
+      "MW",
+      "MLW"
+    ],
+    "attachedItems": [
+      "battleaxe|phb"
+    ],
+    "token": {
+      "name": "Knight",
+      "source": "MM"
+    },
+    "isNpc": true,
+    "damageTags": [
+      "S"
+    ]
+  }
+]

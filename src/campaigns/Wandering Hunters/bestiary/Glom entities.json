@@ -1,0 +1,236 @@
+[
+  {
+    "name": "Glom Wanderer Skeleton",
+    "source": "WanderingHunters",
+    "size": [
+      "M"
+    ],
+    "type": "undead",
+    "alignment": [
+      "N",
+      "E"
+    ],
+    "ac": [
+      {
+        "ac": 13,
+        "from": [
+          "armor scraps"
+        ]
+      }
+    ],
+    "hp": {
+      "formula": "4d8 + 8",
+      "average": 26
+    },
+    "speed": {
+      "walk": 15
+    },
+    "str": 14,
+    "dex": 16,
+    "con": 14,
+    "int": 4,
+    "wis": 12,
+    "cha": 4,
+    "senses": [
+      "darkvision 60 ft."
+    ],
+    "passive": 11,
+    "immune": [
+      "poison"
+    ],
+    "vulnerable": [
+      "bludgeoning",
+      "fire",
+      "radiant"
+    ],
+    "conditionImmune": [
+      "blinded",
+      "charmed",
+      "exhaustion",
+      "poisoned"
+    ],
+    "languages": [
+      "understands all languages it spoke before he was possessed",
+      "but can't speak"
+    ],
+    "cr": "1",
+    "action": [
+      {
+        "name": "Multiattack",
+        "entries": [
+          "The Glom Wanderer Skeleton can attack one creature with two attacks or up to three creatures in a cone of 5 feet in front of him."
+        ]
+      },
+      {
+        "name": "Broken Greatsword",
+        "entries": [
+          "{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d8 + 2}) slashing damage."
+        ]
+      }
+    ],
+    "senseTags": [
+      "D"
+    ],
+    "languageTags": [
+      "XX",
+      "CS"
+    ],
+    "hasFluff": true,
+    "hasFluffImages": true,
+    "resist": [
+      "cold",
+      "necrotic"
+    ],
+    "actionTags": [
+      "Multiattack"
+    ],
+    "bonus": [
+      {
+        "name": "Extreme Speed",
+        "entries": [
+          "The Glom Wanderer Skeleton can do a back step of 5 feet, without any opportunity attack, instead of his movement."
+        ]
+      }
+    ],
+    "miscTags": [
+      "MW",
+      "MLW"
+    ],
+    "spellcasting": [
+      {
+        "name": "Spellcasting",
+        "headerEntries": [
+          "The Glom inside the skeleton grants him to cast the following spell, using Wisdom as his spellcasting ability (spell save {@dc 11}, {@hit 3} to hit with spell attacks):"
+        ],
+        "daily": {
+          "2": [
+            "{@spell shadow ball|WanderingHunters}"
+          ]
+        },
+        "ability": "wis",
+        "type": "spellcasting"
+      }
+    ],
+    "spellcastingTags": [
+      "O"
+    ],
+    "tokenHref": {
+      "type": "external",
+      "url": "https://2014.5e.tools/img/MM/Skeleton.png"
+    },
+    "damageTags": [
+      "S"
+    ],
+    "damageTagsSpell": [
+      "O"
+    ]
+  },
+  {
+    "name": "Glom Goblin",
+    "source": "WanderingHunters",
+    "size": [
+      "S"
+    ],
+    "type": {
+      "type": "aberration",
+      "tags": [
+        "goblinoid"
+      ]
+    },
+    "alignment": [
+      "N",
+      "E"
+    ],
+    "ac": [
+      {
+        "ac": 13,
+        "from": [
+          "{@item leather armor|phb}"
+        ]
+      }
+    ],
+    "hp": {
+      "formula": "4d6 + 4",
+      "average": 18
+    },
+    "speed": {
+      "walk": 15
+    },
+    "str": 10,
+    "dex": 16,
+    "con": 12,
+    "int": 4,
+    "wis": 12,
+    "cha": 4,
+    "skill": {
+      "stealth": "+6"
+    },
+    "senses": [
+      "darkvision 60 ft."
+    ],
+    "passive": 11,
+    "languages": [
+      "understands all languages it spoke before he was possessed",
+      "but can't speak"
+    ],
+    "cr": "1/2",
+    "action": [
+      {
+        "name": "Multiattack",
+        "entries": [
+          "The Glom Goblin makes two Scimitar or Shortbow attacks."
+        ]
+      },
+      {
+        "name": "Scimitar",
+        "entries": [
+          "{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 3}) slashing damage."
+        ]
+      },
+      {
+        "name": "Shortbow",
+        "entries": [
+          "{@atk rw} {@hit 5} to hit, range 80/320 ft., one target. {@h}5 ({@damage 1d6 + 3}) piercing damage."
+        ]
+      }
+    ],
+    "senseTags": [
+      "D"
+    ],
+    "languageTags": [
+      "XX",
+      "CS"
+    ],
+    "damageTags": [
+      "P",
+      "S"
+    ],
+    "miscTags": [
+      "MW",
+      "RW",
+      "RNG"
+    ],
+    "hasFluff": true,
+    "hasFluffImages": true,
+    "vulnerable": [
+      "fire",
+      "radiant"
+    ],
+    "resist": [
+      "cold",
+      "necrotic"
+    ],
+    "immune": [
+      "poison"
+    ],
+    "conditionImmune": [
+      "blinded",
+      "charmed",
+      "exhaustion",
+      "poisoned"
+    ],
+    "actionTags": [
+      "Multiattack"
+    ]
+  }
+]
