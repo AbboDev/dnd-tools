@@ -91,6 +91,49 @@ async function build() {
     }
   }
 
+  // Load and construct adventure data if the folder exists
+  const adventurePath = `${campaignPath}/adventure`;
+  if (await fs.pathExists(adventurePath)) {
+    const adventureFiles = glob.sync(`${adventurePath}/**/*.json`).sort();
+    const sections = [];
+    for (const file of adventureFiles) {
+      const section = await fs.readJson(file);
+      sections.push(section);
+    }
+
+    if (sections.length) {
+      output.adventureData = [
+        {
+          id: meta.json,
+          source: meta.json,
+          data: sections
+        }
+      ];
+
+      output.adventure = [
+        {
+          id: meta.json,
+          name: meta.full,
+          source: meta.json,
+          group: "homebrew",
+          level: {
+            start: 1,
+            end: 20
+          },
+          published: meta.dateReleased || "2026-01-01",
+          author: (meta.authors || []).join(", "),
+          storyline: "None",
+          contents: sections.map(section => ({
+            name: section.name,
+            headers: (section.entries || [])
+              .filter(entry => entry.type === "section" || entry.type === "entries")
+              .map(entry => entry.name)
+          }))
+        }
+      ];
+    }
+  }
+
   if (args.update) {
     let oldBuild = null;
     if (await fs.pathExists(OUTPUT_FILE)) {
