@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "item.schema.json",
+  "version": "0.0.1",
+  "oneOf": [
+    {
+      "title": "Item (Array)",
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items.json#/$defs/item"
+      }
+    },
+    {
+      "title": "Item (Single)",
+      "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items.json#/$defs/item"
+    }
+  ]
+}

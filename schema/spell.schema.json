@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "spell.schema.json",
+  "version": "0.0.1",
+  "oneOf": [
+    {
+      "title": "Spell (Array)",
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/spells/spells.json#/$defs/spell"
+      }
+    },
+    {
+      "title": "Spell (Single)",
+      "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/spells/spells.json#/$defs/spell"
+    }
+  ]
+}

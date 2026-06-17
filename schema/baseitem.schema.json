@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "baseitem.schema.json",
+  "version": "0.0.1",
+  "oneOf": [
+    {
+      "title": "Base Item (Array)",
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items-base.json#/$defs/baseitem"
+      }
+    },
+    {
+      "title": "Base Item (Single)",
+      "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items-base.json#/$defs/baseitem"
+    }
+  ]
+}

@@ -20,13 +20,15 @@
   },
   "oneOf": [
     {
-      "$ref": "#/$defs/Item"
-    },
-    {
+      "title": "Custom Item (Array)",
       "type": "array",
       "items": {
         "$ref": "#/$defs/Item"
       }
+    },
+    {
+      "title": "Custom Item (Single)",
+      "$ref": "#/$defs/Item"
     }
   ]
 }

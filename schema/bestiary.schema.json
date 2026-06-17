@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bestiary.schema.json",
+  "version": "0.0.1",
+  "oneOf": [
+    {
+      "title": "Bestiary (Array)",
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/bestiary/bestiary.json#/$defs/creature"
+      }
+    },
+    {
+      "title": "Bestiary (Single)",
+      "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/bestiary/bestiary.json#/$defs/creature"
+    }
+  ]
+}

@@ -11,38 +11,38 @@
       "fileMatch": [
         "src/**/bestiary/*.json"
       ],
-      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/bestiary/bestiary.json#/$defs/creature"
+      "url": "./schema/bestiary.schema.json"
     },
     {
       "fileMatch": [
         "src/**/baseitem/*.json"
       ],
-      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items-base.json#/$defs/baseitem"
+      "url": "./schema/baseitem.schema.json"
     },
     {
       "fileMatch": [
         "src/**/item/*.json"
       ],
-      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items.json#/$defs/item"
+      "url": "./schema/item.schema.json"
     },
     {
       "fileMatch": [
         "src/**/spell/*.json"
       ],
-      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/spells/spells.json#/$defs/spell"
+      "url": "./schema/spell.schema.json"
     }
   ],
   "workbench.colorCustomizations": {
-    "activityBar.background": "#1B107F",
-    "titleBar.activeBackground": "#2616B2",
-    "titleBar.activeForeground": "#FCFBFF",
-    "titleBar.inactiveBackground": "#1B107F",
-    "titleBar.inactiveForeground": "#FCFBFF",
-    "statusBar.background": "#1B107F",
-    "statusBar.foreground": "#FCFBFF",
-    "statusBar.debuggingBackground": "#1B107F",
-    "statusBar.debuggingForeground": "#FCFBFF",
-    "statusBar.noFolderBackground": "#1B107F",
-    "statusBar.noFolderForeground": "#FCFBFF"
+    "activityBar.background": "#580D3B",
+    "titleBar.activeBackground": "#7B1252",
+    "titleBar.activeForeground": "#FFFCFD",
+    "titleBar.inactiveBackground": "#580D3B",
+    "titleBar.inactiveForeground": "#FFFCFD",
+    "statusBar.background": "#580D3B",
+    "statusBar.foreground": "#FFFCFD",
+    "statusBar.debuggingBackground": "#580D3B",
+    "statusBar.debuggingForeground": "#FFFCFD",
+    "statusBar.noFolderBackground": "#580D3B",
+    "statusBar.noFolderForeground": "#FFFCFD"
   }
 }
