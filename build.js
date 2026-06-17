@@ -1,6 +1,6 @@
 import fs from "fs-extra";
 import * as glob from "glob";
-import { Command } from "commander";
+import { Command, Option } from "commander";
 
 const program = new Command();
 
@@ -8,8 +8,10 @@ program
   .version('0.0.1', '-v, --version')
   .usage('[OPTIONS]...')
   .requiredOption('-c, --campaign <value>', 'Campaign source to build')
-  .option('-V, --visibility <value>', 'Visibility for output', 'dm')
   .option('-o, --output <value>', 'Output file')
+  .addOption(new Option('-e, --edition <size>', 'Edition for output').choices(['classic', 'one']).default('classic', 'for classic'))
+  .addOption(new Option('-V, --visibility <size>', 'Visibility for output').choices(['dm', 'player']).default('dm', 'for dm'))
+  .addOption(new Option('--status <size>', 'Status for output').choices(["ready", "wip", "invalid", "deprecated"]).default('wip', 'for wip'))
   .parse(process.argv);
 
 const args = program.opts();
@@ -33,6 +35,9 @@ async function build() {
 
   const visibilityDoc = args.visibility.toUpperCase();
 
+  const dateAdded = Math.floor(new Date(meta.dateReleased).getTime() / 1000);
+  const dateLastModified = Math.floor(new Date().getTime() / 1000);
+
   const output = {
     _meta: {
       sources: [
@@ -41,7 +46,12 @@ async function build() {
           abbreviation: `${meta.abbreviation}-${visibilityDoc}`,
           full: `${meta.full} (${visibilityDoc})`,
         }
-    ] },
+      ],
+      edition: args.edition,
+      status: args.status,
+      dateAdded,
+      dateLastModified,
+    }
   };
 
   for (const [folder, finalKey] of Object.entries(CATEGORIES)) {

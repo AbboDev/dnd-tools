@@ -2,11 +2,10 @@
   "json": "WanderingHunters",
   "abbreviation": "WH",
   "full": "Wandering Hunters",
-  "url": "",
+  "version": "0.0.1",
   "authors": [
     "Abbo"
   ],
-  "version": "0.0.1",
-  "convertedBy": [],
-  "color": "#16ad22"
+  "color": "16ad22",
+  "dateReleased": "2023-01-01"
 }

@@ -9,6 +9,12 @@
     },
     {
       "fileMatch": [
+        "src/**/_meta.json"
+      ],
+      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/homebrew.json#/$defs/_meta/properties/sources/items"
+    },
+    {
+      "fileMatch": [
         "src/**/bestiary/*.json"
       ],
       "url": "./schema/bestiary.schema.json"
@@ -44,5 +50,13 @@
     "statusBar.debuggingForeground": "#FFFCFD",
     "statusBar.noFolderBackground": "#580D3B",
     "statusBar.noFolderForeground": "#FFFCFD"
-  }
+  },
+  "cSpell.words": [
+    "Darkvision",
+    "Greatsword",
+    "Multiattack",
+    "Spellcaster",
+    "Spellcasters",
+    "Spellcasting"
+  ]
 }
