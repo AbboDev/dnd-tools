@@ -58,10 +58,14 @@ async function build() {
   };
 
   for (const [folder, finalKey] of Object.entries(CATEGORIES)) {
-    const files = [
+    const allFiles = [
       ...glob.sync(`${SRC_BASE}/shared/${folder}/**/*.json`),
       ...glob.sync(`${campaignPath}/${folder}/**/*.json`)
     ];
+    const files = allFiles.filter(file => {
+      const name = path.basename(file);
+      return !name.includes(".disabled.");
+    });
 
     const merged = [];
 
