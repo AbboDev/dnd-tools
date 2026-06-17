@@ -36,6 +36,12 @@
         "src/**/spell/*.json"
       ],
       "url": "./schema/spell.schema.json"
+    },
+    {
+      "fileMatch": [
+        "builds/*.json"
+      ],
+      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/homebrew.json"
     }
   ],
   "workbench.colorCustomizations": {
