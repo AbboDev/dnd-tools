@@ -77,7 +77,7 @@ async function build() {
 
       const filtered = arrayData.filter(entry => {
         if (!entry._visibility) return true;
-        return entry._visibility.includes(visibility);
+        return entry._visibility.includes(args.visibility);
       });
 
       merged.push(...filtered.map(e => {
@@ -92,7 +92,10 @@ async function build() {
   }
 
   if (args.update) {
-    const oldBuild = await fs.readJson(OUTPUT_FILE);
+    let oldBuild = null;
+    if (await fs.pathExists(OUTPUT_FILE)) {
+      oldBuild = await fs.readJson(OUTPUT_FILE);
+    }
 
     if (oldBuild) {
       const versionBump = compareBuilds(oldBuild, output);
