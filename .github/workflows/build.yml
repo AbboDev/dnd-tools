@@ -80,6 +80,8 @@ jobs:
 
       - run: npm ci
 
+      - run: npm link
+
       - run: npm run build "${{ matrix.campaign }}"
 
       - uses: actions/upload-pages-artifact@v3
