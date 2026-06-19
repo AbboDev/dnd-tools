@@ -39,7 +39,8 @@ async function build() {
   const campaignPath = `${SRC_BASE}/campaigns/${args.campaign}`;
   const meta = await fs.readJson(`${campaignPath}/_meta.json`);
 
-  const visibilityDoc = args.visibility.toUpperCase();
+  let full = meta.full;
+  if (args.visibility === "player") full = full + " (Player's Edition)";
 
   const dateAdded = Math.floor(new Date(meta.dateReleased).getTime() / 1000);
   const dateLastModified = Math.floor(new Date().getTime() / 1000);
@@ -49,8 +50,7 @@ async function build() {
       sources: [
         {
           ...meta,
-          abbreviation: `${meta.abbreviation}-${visibilityDoc}`,
-          full: `${meta.full} (${visibilityDoc})`,
+          full,
         }
       ],
       edition: args.edition,
