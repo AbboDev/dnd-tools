@@ -5,9 +5,9 @@ on:
     branches:
       - main
       - autodeploy
-    # paths:
-    #   - "src/shared/**"
-    #   - "src/campaigns/**"
+    paths:
+      - "src/shared/**"
+      - "src/campaigns/**"
 
 jobs:
   detect:
@@ -24,6 +24,7 @@ jobs:
       - id: changed
         run: |
           CHANGED=$(git diff --name-only HEAD^ HEAD)
+            echo $CHANGED
 
           CAMPAIGNS=""
 
