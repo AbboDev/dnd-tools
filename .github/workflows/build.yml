@@ -56,10 +56,6 @@ jobs:
     environment:
       name: production
 
-    strategy:
-      matrix:
-        campaign: ${{ fromJson(needs.detect.outputs.campaigns) }}
-
     runs-on: ubuntu-latest
 
     permissions:
@@ -68,7 +64,7 @@ jobs:
       id-token: write
 
     steps:
-      - run: echo ${{ matrix.campaign }}
+      - run: echo '${{ needs.detect.outputs.campaigns }}'
 
       - uses: actions/checkout@v7
 
@@ -80,7 +76,9 @@ jobs:
 
       - run: npm link
 
-      - run: npm run build "${{ matrix.campaign }}"
+      - name: Build campaigns
+        run: |
+          echo '${{ needs.detect.outputs.campaigns }}' | jq -r '.[]' | xargs -d '\n' npm run build --
 
       - uses: actions/upload-pages-artifact@v5
         with:

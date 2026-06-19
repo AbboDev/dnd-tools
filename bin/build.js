@@ -207,5 +207,5 @@ async function build(campaign) {
 }
 
 for (const campaign of program.args) {
-  build(campaign);
+  await build(campaign);
 }
