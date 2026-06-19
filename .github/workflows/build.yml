@@ -29,21 +29,27 @@ jobs:
           do
             echo "$FILE"
             if [[ "$FILE" =~ ^src/campaigns/([^/]+)/ ]]; then
+              echo "ecco CAMPAIGN"
               echo "${BASH_REMATCH[1]}"
+              echo "$CAMPAIGNS"
               CAMPAIGNS="$CAMPAIGNS,${BASH_REMATCH[1]}"
             fi
 
             if [[ "$FILE" =~ ^src/shared/ ]]; then
+              echo "ecco SHARED"
               CAMPAIGNS="ALL"
             fi
           done
 
+          echo "-------------"
           echo "$CAMPAIGNS"
 
           if [ "$CAMPAIGNS" = "ALL" ]; then
+            echo "ecco ALL"
             CAMPAIGNS=$(ls src/campaigns | jq -R -s -c 'split("\n")[:-1]')
           else
             echo "-------------"
+            echo "$CAMPAIGNS"
             echo "$CAMPAIGNS" | tr ',' ' uuuu '
             echo "$CAMPAIGNS" | tr ',' '\n'
             echo "$CAMPAIGNS" | jq -R -s -c 'split(",")[:-1]'
@@ -51,6 +57,7 @@ jobs:
             CAMPAIGNS=$(echo "$CAMPAIGNS" | tr ',' '\n' | jq -R -s -c 'split("\n")[:-1]')
           fi
 
+          echo "-----------------"
           echo "$CAMPAIGNS"
 
           echo "campaigns=$CAMPAIGNS" >> $GITHUB_OUTPUT
