@@ -6,6 +6,7 @@ import semver from "semver";
 import path from "path";
 import { Command, Option } from "commander";
 import { compareBuilds } from "../src/helpers/compareBuilds.js";
+import { filterNodeByVisibility, hasVisibility, VISIBILITIES } from "../src/helpers/visibility.js";
 
 const program = new Command();
 
@@ -22,11 +23,6 @@ const args = program.opts();
 
 const SRC_BASE = "./src";
 const OUTPUT_DIR = "./builds";
-
-const VISIBILITIES = [
-  "dm",
-  "player"
-];
 
 const CATEGORIES = {
   item: "item",
@@ -74,12 +70,15 @@ async function build(campaign) {
 
   // 2. Load and construct adventure data if the folder exists once
   const adventurePath = `${campaignPath}/adventure`;
-  const sections = [];
+  const adventureFilesData = [];
   if (await fs.pathExists(adventurePath)) {
     const adventureFiles = glob.sync(`${adventurePath}/**/*.json`).sort();
     for (const file of adventureFiles) {
       const section = await fs.readJson(file);
-      sections.push(section);
+      adventureFilesData.push({
+        filename: path.basename(file),
+        data: section
+      });
     }
   }
 
@@ -101,15 +100,7 @@ async function build(campaign) {
     for (const [finalKey, files] of Object.entries(categoryFiles)) {
       const merged = [];
       for (const file of files) {
-        // Exclude file if extension specifies a different visibility
-        let excludeFile = false;
-        for (const choice of VISIBILITIES) {
-          if (choice !== visibility && (file.filename.includes(`.${choice}.json`) || file.filename.includes(`.${choice}.`))) {
-            excludeFile = true;
-            break;
-          }
-        }
-        if (excludeFile) continue;
+        if (!hasVisibility(file.filename, visibility)) continue;
 
         const filtered = file.entries.filter(entry => {
           if (!entry._visibility) return true;
@@ -127,12 +118,21 @@ async function build(campaign) {
       }
     }
 
-    if (sections.length) {
+    // Process and filter adventure sections
+    const activeAdventureSections = [];
+    for (const file of adventureFilesData) {
+      if (!hasVisibility(file.filename, visibility)) continue;
+
+      const filteredSection = filterNodeByVisibility(file.data, visibility);
+      activeAdventureSections.push(filteredSection);
+    }
+
+    if (activeAdventureSections.length) {
       output.adventureData = [
         {
           id: meta.json,
           source: meta.json,
-          data: sections
+          data: activeAdventureSections
         }
       ];
 
@@ -149,7 +149,7 @@ async function build(campaign) {
           published: meta.dateReleased || "2026-01-01",
           author: (meta.authors || []).join(", "),
           storyline: "None",
-          contents: sections.map(section => ({
+          contents: activeAdventureSections.map(section => ({
             name: section.name,
             headers: (section.entries || [])
               .filter(entry => entry.type === "section" || entry.type === "entries")
