@@ -43,7 +43,7 @@ jobs:
           if [ "$CAMPAIGNS" = "ALL" ]; then
             CAMPAIGNS=$(ls src/campaigns | jq -R -s -c 'split("\n")[:-1]')
           else
-            echo "$CAMPAIGNS" | tr ',' '\n'"
+            echo "$CAMPAIGNS" | tr ',' '\n'
             echo "$CAMPAIGNS" | jq -R -s -c 'split(",")[:-1]'
             echo "$CAMPAIGNS" | tr ',' '\n' | jq -R -s -c 'split("\n")[:-1]'
             CAMPAIGNS=$(echo "$CAMPAIGNS" | tr ',' '\n' | jq -R -s -c 'split("\n")[:-1]')
