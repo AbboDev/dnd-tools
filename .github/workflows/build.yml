@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "src/shared/**"
-      - "src/campaigns/**"
+    # paths:
+    #   - "src/shared/**"
+    #   - "src/campaigns/**"
 
 jobs:
   detect:
