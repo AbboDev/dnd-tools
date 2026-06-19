@@ -7,6 +7,7 @@
     "node": ">=24"
   },
   "scripts": {
+    "build": "build-campaign",
     "build:wh": "build-campaign \"Wandering Hunters\"",
     "build:tks": "build-campaign \"The Keys Seekers\"",
     "build:all": "npm run build:tks && npm run build:wh",

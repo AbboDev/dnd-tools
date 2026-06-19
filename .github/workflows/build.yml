@@ -22,6 +22,7 @@ jobs:
           fetch-depth: 2
 
       - id: changed
+        name: "Detect changed files"
         run: |
           CAMPAIGNS=""
 
@@ -79,7 +80,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npx build-campaigns "${{ matrix.campaign }}"
+      - run: npm run build "${{ matrix.campaign }}"
 
       - uses: actions/upload-pages-artifact@v3
         with:
