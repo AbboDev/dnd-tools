@@ -27,8 +27,9 @@ jobs:
 
           git diff --name-only HEAD^ HEAD | while IFS= read -r FILE
           do
-            echo $FILE
+            echo "$FILE"
             if [[ "$FILE" =~ ^src/campaigns/([^/]+)/ ]]; then
+              echo "${BASH_REMATCH[1]}"
               CAMPAIGNS="$CAMPAIGNS ${BASH_REMATCH[1]}"
             fi
 
@@ -36,6 +37,8 @@ jobs:
               CAMPAIGNS="ALL"
             fi
           done
+
+          echo "$CAMPAIGNS"
 
           if [ "$CAMPAIGNS" = "ALL" ]; then
             CAMPAIGNS=$(ls src/campaigns | jq -R -s -c 'split("\n")[:-1]')
