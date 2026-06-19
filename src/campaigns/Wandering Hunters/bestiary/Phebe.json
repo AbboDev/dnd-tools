@@ -1,5 +1,9 @@
 [
   {
+    "_visibility": [
+      "player",
+      "dm"
+    ],
     "name": "Phebe, cavaliere impavida",
     "source": "WanderingHunters",
     "size": [
@@ -113,6 +117,9 @@
     ]
   },
   {
+    "_visibility": [
+      "dm"
+    ],
     "name": "Pebhe posseduta",
     "size": [
       "M"

@@ -7,14 +7,12 @@
     "node": ">=20"
   },
   "scripts": {
-    "build:wh:dm": "build-campaign -c \"Wandering Hunters\" -V dm",
-    "build:wh:player": "build-campaign -c \"Wandering Hunters\" -V player",
-    "publish:wh:dm": "npm run build:wh:dm -- --update",
-    "publish:wh:player": "npm run build:wh:player -- --update",
-    "build:tks:dm": "build-campaign -c \"The Keys Seekers\" -V dm",
-    "build:tks:player": "build-campaign -c \"The Keys Seekers\" -V player",
-    "publish:tks:dm": "npm run build:tks:dm -- --update",
-    "publish:tks:player": "npm run build:tks:player -- --update"
+    "build:wh": "build-campaign \"Wandering Hunters\"",
+    "build:tks": "build-campaign \"The Keys Seekers\"",
+    "build:all": "npm run build:tks && npm run build:wh",
+    "publish:wh": "npm run build:wh -- --update",
+    "publish:tks": "npm run build:tks -- --update",
+    "publish:all": "npm run publish:tks && npm run publish:wh"
   },
   "bin": {
     "build-campaign": "./bin/build.js"

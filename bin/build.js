@@ -12,21 +12,21 @@ const program = new Command();
 program
   .version('0.0.1', '-v, --version')
   .usage('[OPTIONS]...')
-  .requiredOption('-c, --campaign <value>', 'Campaign source to build')
-  .option('-o, --output <value>', 'Output file')
-  .addOption(new Option('-e, --edition <size>', 'Edition for output').choices(['classic', 'one']).default('classic', 'for classic'))
-  .addOption(new Option('-V, --visibility <size>', 'Visibility for output').choices(['dm', 'player']).default('dm', 'for dm'))
-  .addOption(new Option('--status <size>', 'Status for output').choices(["ready", "wip", "invalid", "deprecated"]).default('wip', 'for wip'))
+  .argument('<campaigns...>', 'Campaigns source to build')
+  .addOption(new Option('-e, --edition <edition>', 'Edition for output').choices(['classic', 'one']).default('classic', 'for classic'))
+  .addOption(new Option('--status <status>', 'Status for output').choices(["ready", "wip", "invalid", "deprecated"]).default('wip', 'for wip'))
   .option('--update', 'Updates the version of the campaign')
   .parse(process.argv);
 
 const args = program.opts();
 
-args.output = args.output || args.campaign;
-
 const SRC_BASE = "./src";
 const OUTPUT_DIR = "./builds";
-const OUTPUT_FILE = `${OUTPUT_DIR}/${args.output}.${args.visibility}.json`;
+
+const VISIBILITIES = [
+  "dm",
+  "player"
+];
 
 const CATEGORIES = {
   item: "item",
@@ -35,34 +35,25 @@ const CATEGORIES = {
   baseitem: "baseitem"
 };
 
-async function build() {
-  const campaignPath = `${SRC_BASE}/campaigns/${args.campaign}`;
-  const meta = await fs.readJson(`${campaignPath}/_meta.json`);
+let sharedFiles = null;
 
-  let full = meta.full;
-  if (args.visibility === "player") full = full + " (Player's Edition)";
+async function build(campaign) {
+  const campaignPath = `${SRC_BASE}/campaigns/${campaign}`;
+  const meta = await fs.readJson(`${campaignPath}/_meta.json`);
 
   const dateAdded = Math.floor(new Date(meta.dateReleased).getTime() / 1000);
   const dateLastModified = Math.floor(new Date().getTime() / 1000);
 
-  const output = {
-    _meta: {
-      sources: [
-        {
-          ...meta,
-          full,
-        }
-      ],
-      edition: args.edition,
-      status: args.status,
-      dateAdded,
-      dateLastModified,
-    }
-  };
-
+  // 1. Read all files into memory once
+  const categoryFiles = {};
   for (const [folder, finalKey] of Object.entries(CATEGORIES)) {
-    const allFiles = [
-      ...glob.sync(`${SRC_BASE}/shared/${folder}/**/*.json`),
+    let allFiles = null;
+    if (sharedFiles === null) {
+      sharedFiles = glob.sync(`${SRC_BASE}/shared/${folder}/**/*.json`);
+    }
+
+    allFiles = [
+      ...sharedFiles,
       ...glob.sync(`${campaignPath}/${folder}/**/*.json`)
     ];
     const files = allFiles.filter(file => {
@@ -70,37 +61,70 @@ async function build() {
       return !name.includes(".disabled.");
     });
 
-    const merged = [];
-
+    categoryFiles[finalKey] = [];
     for (const file of files) {
-      const data = await fs.readJson(file);
-
-      const arrayData = Array.isArray(data) ? data : [data];
-
-      const filtered = arrayData.filter(entry => {
-        if (!entry._visibility) return true;
-        return entry._visibility.includes(args.visibility);
+      const fileData = await fs.readJson(file);
+      const arrayData = Array.isArray(fileData) ? fileData : [fileData];
+      categoryFiles[finalKey].push({
+        filename: path.basename(file),
+        entries: arrayData
       });
-
-      merged.push(...filtered.map(e => {
-        delete e._visibility;
-        return e;
-      }));
-    }
-
-    if (merged.length) {
-      output[finalKey] = merged;
     }
   }
 
-  // Load and construct adventure data if the folder exists
+  // 2. Load and construct adventure data if the folder exists once
   const adventurePath = `${campaignPath}/adventure`;
+  const sections = [];
   if (await fs.pathExists(adventurePath)) {
     const adventureFiles = glob.sync(`${adventurePath}/**/*.json`).sort();
-    const sections = [];
     for (const file of adventureFiles) {
       const section = await fs.readJson(file);
       sections.push(section);
+    }
+  }
+
+  const outputs = {};
+
+  // 3. Construct all outputs in memory
+  for (const visibility of VISIBILITIES) {
+    const output = {
+      _meta: {
+        sources: [],
+        edition: args.edition,
+        status: args.status,
+        dateAdded,
+        dateLastModified,
+      }
+    };
+
+    // Filter and merge from memory
+    for (const [finalKey, files] of Object.entries(categoryFiles)) {
+      const merged = [];
+      for (const file of files) {
+        // Exclude file if extension specifies a different visibility
+        let excludeFile = false;
+        for (const choice of VISIBILITIES) {
+          if (choice !== visibility && (file.filename.includes(`.${choice}.json`) || file.filename.includes(`.${choice}.`))) {
+            excludeFile = true;
+            break;
+          }
+        }
+        if (excludeFile) continue;
+
+        const filtered = file.entries.filter(entry => {
+          if (!entry._visibility) return true;
+          return entry._visibility.includes(visibility);
+        });
+
+        merged.push(...filtered.map(entry => {
+          const { _visibility, ...cleanEntry } = entry;
+          return cleanEntry;
+        }));
+      }
+
+      if (merged.length) {
+        output[finalKey] = merged;
+      }
     }
 
     if (sections.length) {
@@ -134,26 +158,54 @@ async function build() {
         }
       ];
     }
+
+    outputs[visibility] = output;
   }
+
+  // 4. Calculate synchronized semver bump across both visibilities
+  const BUMP_LEVELS = { patch: 1, minor: 2, major: 3 };
+  let maxBump = null;
 
   if (args.update) {
-    let oldBuild = null;
-    if (await fs.pathExists(OUTPUT_FILE)) {
-      oldBuild = await fs.readJson(OUTPUT_FILE);
-    }
-
-    if (oldBuild) {
-      const versionBump = compareBuilds(oldBuild, output);
-
-      const newVersion = semver.inc(output._meta.sources[0].version, versionBump);
-      output._meta.sources[0].version = newVersion;
-
-      await fs.outputJson(`${campaignPath}/_meta.json`, {...meta, version: newVersion}, { spaces: 2 });
+    for (const visibility of VISIBILITIES) {
+      const outputFileName = `${OUTPUT_DIR}/${campaign}.${visibility}.json`;
+      if (await fs.pathExists(outputFileName)) {
+        const oldBuild = await fs.readJson(outputFileName);
+        const bump = compareBuilds(oldBuild, outputs[visibility]);
+        if (bump) {
+          if (!maxBump || BUMP_LEVELS[bump] > BUMP_LEVELS[maxBump]) {
+            maxBump = bump;
+          }
+        }
+      }
     }
   }
 
-  await fs.outputJson(OUTPUT_FILE, output, { spaces: 2 });
-  console.log(`✅ Build completed! Output: ${OUTPUT_FILE}`);
+  // 5. Update campaign metadata version if needed
+  if (maxBump) {
+    const newVersion = semver.inc(meta.version, maxBump);
+    meta.version = newVersion;
+    await fs.outputJson(`${campaignPath}/_meta.json`, meta, { spaces: 2 });
+  }
+
+  // 6. Set final metadata in outputs and save files to disk
+  for (const visibility of VISIBILITIES) {
+    const outputFileName = `${OUTPUT_DIR}/${campaign}.${visibility}.json`;
+    let full = meta.full;
+    if (visibility === "player") {
+      full = full + " (Player's Edition)";
+    }
+
+    outputs[visibility]._meta.sources.push({
+      ...meta,
+      full,
+    });
+
+    await fs.outputJson(outputFileName, outputs[visibility], { spaces: 2 });
+    console.log(`✅ Build completed! Output: ${outputFileName}`);
+  }
 }
 
-build();
+for (const campaign of program.args) {
+  build(campaign);
+}
