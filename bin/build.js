@@ -1,9 +1,11 @@
+#!/usr/bin/env node
+
 import fs from "fs-extra";
 import * as glob from "glob";
 import semver from "semver";
 import path from "path";
 import { Command, Option } from "commander";
-import { compareBuilds } from "./src/helpers/compareBuilds.js";
+import { compareBuilds } from "../src/helpers/compareBuilds.js";
 
 const program = new Command();
 
