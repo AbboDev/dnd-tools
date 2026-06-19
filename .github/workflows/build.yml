@@ -1,0 +1,74 @@
+name: Publish D&D Homebrew
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/shared/**"
+      - "src/campaigns/**"
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+
+    outputs:
+      campaigns: ${{ steps.changed.outputs.campaigns }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - id: changed
+        run: |
+          CHANGED=$(git diff --name-only HEAD^ HEAD)
+
+          CAMPAIGNS=""
+
+          for FILE in $CHANGED
+          do
+            if [[ "$FILE" =~ ^src/campaigns/([^/]+)/ ]]; then
+              CAMPAIGNS="$CAMPAIGNS ${BASH_REMATCH[1]}"
+            fi
+
+            if [[ "$FILE" =~ ^src/shared/ ]]; then
+              CAMPAIGNS="ALL"
+            fi
+          done
+
+          if [ "$CAMPAIGNS" = "ALL" ]; then
+            CAMPAIGNS=$(ls src/campaigns | jq -R -s -c 'split("\n")[:-1]')
+          else
+            CAMPAIGNS=$(echo "$CAMPAIGNS" | tr ' ' '\n' | sort -u | jq -R -s -c 'split("\n")[:-1]')
+          fi
+
+          echo "campaigns=$CAMPAIGNS" >> $GITHUB_OUTPUT
+
+  build:
+    needs: detect
+
+    strategy:
+      matrix:
+        campaign: ${{ fromJson(needs.detect.outputs.campaigns) }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo ${{ matrix.campaign }}
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm ci
+
+      - run: npx build-campaigns "${{ matrix.campaign }}"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: builds
+
+      - uses: actions/deploy-pages@v4
