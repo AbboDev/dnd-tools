@@ -23,12 +23,9 @@ jobs:
 
       - id: changed
         run: |
-          CHANGED=$(git diff --name-only HEAD^ HEAD)
-            echo $CHANGED
-
           CAMPAIGNS=""
 
-          for FILE in $CHANGED
+          git diff --name-only HEAD^ HEAD | while IFS= read -r FILE
           do
             echo $FILE
             if [[ "$FILE" =~ ^src/campaigns/([^/]+)/ ]]; then
