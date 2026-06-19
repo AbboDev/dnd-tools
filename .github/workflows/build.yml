@@ -17,7 +17,7 @@ jobs:
       campaigns: ${{ steps.changed.outputs.campaigns }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 2
 
@@ -28,17 +28,13 @@ jobs:
 
           while IFS= read -r FILE
           do
-            echo "$FILE"
             if [[ "$FILE" =~ ^src/campaigns/([^/]+)/ ]]; then
-              echo "ecco CAMPAIGN"
               CAMP="${BASH_REMATCH[1]}"
-              echo "$CAMP"
               if [[ -z "$CAMPAIGNS" ]]; then
                 CAMPAIGNS="$CAMP"
               else
                 CAMPAIGNS="$CAMPAIGNS,$CAMP"
               fi
-              echo "$CAMPAIGNS"
             fi
 
             if [[ "$FILE" =~ ^src/shared/ ]]; then
@@ -46,17 +42,11 @@ jobs:
             fi
           done < <(git diff --name-only HEAD^ HEAD)
 
-          echo "-------------"
-          echo "$CAMPAIGNS"
-
           if [ "$CAMPAIGNS" = "ALL" ]; then
             CAMPAIGNS=$(ls src/campaigns | jq -R -s -c 'split("\n")[:-1]')
           else
             CAMPAIGNS=$(echo "$CAMPAIGNS" | tr ',' '\n' | sort -u | jq -R -s -c 'split("\n")[:-1]')
           fi
-
-          echo "-----------------"
-          echo "$CAMPAIGNS"
 
           echo "campaigns=$CAMPAIGNS" >> $GITHUB_OUTPUT
 
@@ -70,6 +60,11 @@ jobs:
         campaign: ${{ fromJson(needs.detect.outputs.campaigns) }}
 
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
     steps:
       - run: echo ${{ matrix.campaign }}
