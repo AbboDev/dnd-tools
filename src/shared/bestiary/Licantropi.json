@@ -1,0 +1,285 @@
+[
+  {
+    "name": "Ratto Licantropo Primordiale",
+    "source": "-SHARED",
+    "_copy": {
+      "name": "Wererat",
+      "source": "MM"
+    },
+    "size": ["M"],
+    "type": {
+      "type": "humanoid",
+      "tags": ["human", "shapechanger"]
+    },
+    "alignment": ["C", "E"],
+    "ac": [15],
+    "hp": {
+      "average": 90,
+      "formula": "12d8 + 36"
+    },
+    "speed": {
+      "walk": 30
+    },
+    "str": 12,
+    "dex": 16,
+    "con": 16,
+    "int": 11,
+    "wis": 12,
+    "cha": 10,
+    "save": {
+      "dex": "+6",
+      "con": "+6"
+    },
+    "skill": {
+      "perception": "+4",
+      "stealth": "+8",
+      "survival": "+4"
+    },
+    "senses": ["darkvision 18 m"],
+    "passive": 14,
+    "languages": ["Comune", "Non può parlare quando è in forma di ratto"],
+    "cr": "7",
+
+    "resist": [
+      {
+        "resist": ["bludgeoning", "piercing", "slashing"],
+        "note": "da fonti non argentate"
+      },
+      "force"
+    ],
+
+    "vulnerable": [
+      {
+        "vulnerable": ["bludgeoning", "piercing", "slashing"],
+        "note": "inflitti da armi argentate"
+      }
+    ],
+    "trait": [
+      {
+        "name": "Mutaforma",
+        "entries": [
+          "Il ratto licantropo può usare la sua azione per trasformarsi in un ratto, in un ibrido uomo-ratto o tornare alla sua forma umanoide."
+        ]
+      },
+      {
+        "name": "Olfatto Acuto",
+        "entries": [
+          "Il ratto licantropo ha vantaggio alle prove di Saggezza (Percezione) basate sull'olfatto."
+        ]
+      },
+      {
+        "name": "Rigenerazione Primordiale",
+        "entries": [
+          "Il ratto licantropo recupera 10 punti ferita all'inizio del suo turno.",
+          "Questo tratto non funziona se il ratto licantropo ha subito danni da un'arma argentata dalla fine del suo turno precedente."
+        ]
+      },
+      {
+        "name": "Sangue della Prima Luna",
+        "entries": [
+          "Quando il ratto licantropo scende per la prima volta a metà o meno dei suoi punti ferita massimi, entra in una frenesia predatoria fino alla fine del combattimento.",
+          "Finché è in questa frenesia, ha vantaggio ai tiri per colpire e la sua velocità aumenta di 3 metri.",
+          "Quando entra in questa frenesia, può effettuare immediatamente un attacco di Morso."
+        ]
+      },
+      {
+        "name": "Istinto di Sopravvivenza",
+        "entries": [
+          "Quando il ratto licantropo verrebbe ridotto a 0 punti ferita da un attacco che non è stato effettuato con un'arma argentata, viene invece ridotto a 1 punto ferita.",
+          "Una volta che usa questo tratto, non può usarlo di nuovo finché non termina un riposo lungo."
+        ]
+      },
+      {
+        "name": "Odore del Sangue",
+        "entries": [
+          "Il ratto licantropo ha vantaggio ai tiri per colpire contro creature che non possiedono il massimo dei loro punti ferita."
+        ]
+      }
+    ],
+    "action": [
+      {
+        "name": "Multiattacco (Forma Umanoide o Ibrida)",
+        "entries": [
+          "Il ratto licantropo effettua due attacchi, di cui solo uno può essere un Morso."
+        ]
+      },
+      {
+        "name": "Morso (Solo in Forma di Ratto o Ibrida)",
+        "entries": [
+          "{@atk mw} {@hit 6} a colpire, portata 1,5 m, un bersaglio. {@h}6 ({@damage 1d6 + 3}) danni perforanti più 7 ({@damage 2d6}) danni necrotici.",
+          "Se il bersaglio è un umanoide, deve superare un tiro salvezza di Costituzione CD 14 oppure essere maledetto con la {@variantrule Player Characters as Lycanthropes|MM|licantropia} da ratto licantropo."
+        ]
+      },
+      {
+        "name": "Artigli (Solo in Forma di Ratto o Ibrida)",
+        "entries": [
+          "{@atk mw} {@hit 6} a colpire, portata 1,5 m, un bersaglio. {@h}10 ({@damage 2d6 + 3}) danni taglienti."
+        ]
+      },
+      {
+        "name": "Spada corta (Solo in Forma Umanoide o Ibrida)",
+        "entries": [
+          "{@atk mw,rw} {@hit 6} a colpire, portata 1,5 m, un bersaglio. {@h}5 ({@damage 1d6 + 3}) danni taglienti."
+        ]
+      },
+      {
+        "name": "Balestra Leggera (Solo in Forma Umanoide o Ibrida)",
+        "entries": [
+          "{@atk rw} {@hit 6} a colpire, gittata 24/96 m, un bersaglio. {@h}7 ({@damage 1d8 + 3}) danni perforanti."
+        ]
+      },
+      {
+        "name": "Dominio del branco (Ricarica 5-6)",
+        "entries": [
+          "Il ratto licantropo emette uno stridio penetrante e sceglie una delle seguenti opzioni:",
+          {
+            "type": "list",
+            "style": "list-hang-notitle",
+            "items": [
+              {
+                "type": "item",
+                "name": "Richiamare il branco",
+                "entry": "Il ratto licantropo richiama rinforzi in un raggio di 9 metri. Può scegliere di evocare fino a tre {@creature swarm of rats|mm|sciami di ratti} oppure fino a tre {@creature giant rat|mm|ratti giganti} alleati. Le creature richiamate agiscono immediatamente dopo il ratto licantropo nell'ordine di iniziativa. Il ratto licantropo può avere un solo gruppo di creature richiamate in questo modo alla volta."
+              },
+              {
+                "type": "item",
+                "name": "Comandare il branco",
+                "entry": "Fino a tre {@creature rat|mm|ratti}, {@creature giant rat|mm|ratti giganti}, {@creature swarm of rats|mm|sciami di ratti} o {@creature wererat|mm|ratti licantropi} alleati entro 18 metri dal ratto licantropo possono usare immediatamente la loro reazione per muoversi fino a metà della loro velocità ed effettuare un attacco con arma o un attacco naturale."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "bonus": [
+      {
+        "name": "Scatto Bestiale",
+        "entries": [
+          "Il ratto licantropo si muove fino a metà della sua velocità senza provocare attacchi di opportunità."
+        ]
+      }
+    ],
+    "reaction": [
+      {
+        "name": "Riflesso del Predatore",
+        "entries": [
+          "Quando una creatura manca il ratto licantropo con un attacco in mischia, il ratto licantropo può muoversi fino a 3 metri senza provocare attacchi di opportunità."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ratto Licantropo Ancestrale",
+    "source": "-SHARED",
+    "page": 1,
+    "size": ["M"],
+    "type": {
+      "type": "humanoid",
+      "tags": ["human", "shapechanger"]
+    },
+    "alignment": ["C", "E"],
+    "ac": [15],
+    "hp": {
+      "average": 60,
+      "formula": "8d8 + 24"
+    },
+    "speed": {
+      "walk": 30
+    },
+    "str": 10,
+    "dex": 15,
+    "con": 16,
+    "int": 11,
+    "wis": 10,
+    "cha": 8,
+    "skill": {
+      "perception": "+2",
+      "stealth": "+6"
+    },
+    "senses": ["darkvision 18 m"],
+    "passive": 12,
+    "languages": ["Comune", "Non può parlare quando è in forma di ratto"],
+    "cr": "4",
+    "resist": [
+      {
+        "resist": ["bludgeoning", "piercing", "slashing"],
+        "note": "da fonti non argentate"
+      },
+      "force"
+    ],
+    "vulnerable": [
+      {
+        "vulnerable": ["bludgeoning", "piercing", "slashing"],
+        "note": "inflitti da armi argentate"
+      }
+    ],
+    "trait": [
+      {
+        "name": "Mutaforma",
+        "entries": [
+          "Il ratto licantropo può usare la sua azione per trasformarsi in un ratto, in un ibrido uomo-ratto o tornare alla sua forma umanoide."
+        ]
+      },
+      {
+        "name": "Olfatto Acuto",
+        "entries": [
+          "Il ratto licantropo ha vantaggio alle prove di Saggezza (Percezione) basate sull'olfatto."
+        ]
+      },
+      {
+        "name": "Rigenerazione Minore",
+        "entries": [
+          "Il ratto licantropo recupera 5 punti ferita all'inizio del suo turno.",
+          "Questo tratto non funziona se il ratto licantropo ha subito danni da un'arma argentata dalla fine del suo turno precedente."
+        ]
+      }
+    ],
+    "action": [
+      {
+        "name": "Multiattacco (Forma Umanoide o Ibrida)",
+        "entries": [
+          "Il ratto licantropo effettua due attacchi, di cui solo uno può essere un Morso."
+        ]
+      },
+      {
+        "name": "Morso (Solo in Forma di Ratto o Ibrida)",
+        "entries": [
+          "{@atk mw} {@hit 5} a colpire, portata 1,5 m, un bersaglio. {@h}5 ({@damage 1d4 + 3}) danni perforanti più 3 ({@damage 1d6}) danni necrotici.",
+          "Se il bersaglio è un umanoide, deve superare un tiro salvezza di Costituzione CD 11 oppure essere maledetto con la {@variantrule Player Characters as Lycanthropes|MM|licantropia} da ratto licantropo."
+        ]
+      },
+      {
+        "name": "Artigli (Solo in Forma di Ratto o Ibrida)",
+        "entries": [
+          "{@atk mw} {@hit 5} a colpire, portata 1,5 m, un bersaglio. {@h}7 ({@damage 1d8 + 3}) danni taglienti."
+        ]
+      },
+      {
+        "name": "Spada corta (Solo in Forma Umanoide o Ibrida)",
+        "entries": [
+          "{@atk mw,rw} {@hit 6} a colpire, portata 1,5 m, un bersaglio. {@h}5 ({@damage 1d6 + 3}) danni taglienti."
+        ]
+      },
+      {
+        "name": "Balestra Leggera (Solo in Forma Umanoide o Ibrida)",
+        "entries": [
+          "{@atk rw} {@hit 5} a colpire, gittata 24/96 m, un bersaglio. {@h}7 ({@damage 1d8 + 3}) danni perforanti."
+        ]
+      },
+      {
+        "name": "Comando dello Sciame (Ricarica 5-6)",
+        "entries": [
+          "Il ratto licantropo emette uno stridio penetrante. Fino a tre {@creature giant rat|MM|ratti giganti} o {@creature wererat|MM|ratti licantropi} alleati entro 18 metri possono usare immediatamente la loro reazione per muoversi fino a metà della loro velocità ed effettuare un attacco."
+        ]
+      }
+    ],
+    "bonus": [
+      {
+        "name": "Scatto Bestiale",
+        "entries": [
+          "Il ratto licantropo si muove fino a metà della sua velocità senza provocare attacchi di opportunità."
+        ]
+      }
+    ]
+  }
+]
