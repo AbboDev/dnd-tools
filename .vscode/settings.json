@@ -15,31 +15,31 @@
     },
     {
       "fileMatch": [
-        "src/**/bestiary/*.json"
+        "src/**/bestiary/**/*.json"
       ],
       "url": "./schema/bestiary.schema.json"
     },
     {
       "fileMatch": [
-        "src/**/baseitem/*.json"
+        "src/**/baseitem/**/*.json"
       ],
       "url": "./schema/baseitem.schema.json"
     },
     {
       "fileMatch": [
-        "src/**/item/*.json"
+        "src/**/item/**/*.json"
       ],
       "url": "./schema/item.schema.json"
     },
     {
       "fileMatch": [
-        "src/**/spell/*.json"
+        "src/**/spell/**/*.json"
       ],
       "url": "./schema/spell.schema.json"
     },
     {
       "fileMatch": [
-        "src/**/adventure/*.json"
+        "src/**/adventure/**/*.json"
       ],
       "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/entry.json"
     },
