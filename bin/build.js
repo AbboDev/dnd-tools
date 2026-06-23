@@ -6,17 +6,29 @@ import semver from "semver";
 import path from "path";
 import { Command, Option } from "commander";
 import { compareBuilds } from "../src/helpers/compareBuilds.js";
-import { filterNodeByVisibility, hasVisibility, VISIBILITIES } from "../src/helpers/visibility.js";
+import {
+  filterNodeByVisibility,
+  hasVisibility,
+  VISIBILITIES,
+} from "../src/helpers/visibility.js";
 
 const program = new Command();
 
 program
-  .version('0.0.1', '-v, --version')
-  .usage('[OPTIONS]...')
-  .argument('<campaigns...>', 'Campaigns source to build')
-  .addOption(new Option('-e, --edition <edition>', 'Edition for output').choices(['classic', 'one']).default('classic', 'for classic'))
-  .addOption(new Option('--status <status>', 'Status for output').choices(["ready", "wip", "invalid", "deprecated"]).default('wip', 'for wip'))
-  .option('--update', 'Updates the version of the campaign')
+  .version("0.0.1", "-v, --version")
+  .usage("[OPTIONS]...")
+  .argument("<campaigns...>", "Campaigns source to build")
+  .addOption(
+    new Option("-e, --edition <edition>", "Edition for output")
+      .choices(["classic", "one"])
+      .default("classic", "for classic"),
+  )
+  .addOption(
+    new Option("--status <status>", "Status for output")
+      .choices(["ready", "wip", "invalid", "deprecated"])
+      .default("wip", "for wip"),
+  )
+  .option("--update", "Updates the version of the campaign")
   .parse(process.argv);
 
 const args = program.opts();
@@ -28,7 +40,7 @@ const CATEGORIES = {
   item: "item",
   bestiary: "monster",
   spell: "spell",
-  baseitem: "baseitem"
+  baseitem: "baseitem",
 };
 
 let sharedFiles = null;
@@ -50,9 +62,9 @@ async function build(campaign) {
 
     allFiles = [
       ...sharedFiles,
-      ...glob.sync(`${campaignPath}/${folder}/**/*.json`)
+      ...glob.sync(`${campaignPath}/${folder}/**/*.json`),
     ];
-    const files = allFiles.filter(file => {
+    const files = allFiles.filter((file) => {
       const name = path.basename(file);
       return !name.includes(".disabled.");
     });
@@ -63,7 +75,7 @@ async function build(campaign) {
       const arrayData = Array.isArray(fileData) ? fileData : [fileData];
       categoryFiles[finalKey].push({
         filename: path.basename(file),
-        entries: arrayData
+        entries: arrayData,
       });
     }
   }
@@ -77,7 +89,7 @@ async function build(campaign) {
       const section = await fs.readJson(file);
       adventureFilesData.push({
         filename: path.basename(file),
-        data: section
+        data: section,
       });
     }
   }
@@ -93,7 +105,7 @@ async function build(campaign) {
         status: args.status,
         dateAdded,
         dateLastModified,
-      }
+      },
     };
 
     // Filter and merge from memory
@@ -102,15 +114,17 @@ async function build(campaign) {
       for (const file of files) {
         if (!hasVisibility(file.filename, visibility)) continue;
 
-        const filtered = file.entries.filter(entry => {
+        const filtered = file.entries.filter((entry) => {
           if (!entry._visibility) return true;
           return entry._visibility.includes(visibility);
         });
 
-        merged.push(...filtered.map(entry => {
-          const { _visibility, ...cleanEntry } = entry;
-          return cleanEntry;
-        }));
+        merged.push(
+          ...filtered.map((entry) => {
+            const { _visibility, ...cleanEntry } = entry;
+            return cleanEntry;
+          }),
+        );
       }
 
       if (merged.length) {
@@ -132,8 +146,8 @@ async function build(campaign) {
         {
           id: meta.json,
           source: meta.json,
-          data: activeAdventureSections
-        }
+          data: activeAdventureSections,
+        },
       ];
 
       output.adventure = [
@@ -144,18 +158,20 @@ async function build(campaign) {
           group: "homebrew",
           level: {
             start: 1,
-            end: 20
+            end: 20,
           },
           published: meta.dateReleased || "2026-01-01",
           author: (meta.authors || []).join(", "),
           storyline: "None",
-          contents: activeAdventureSections.map(section => ({
+          contents: activeAdventureSections.map((section) => ({
             name: section.name,
             headers: (section.entries || [])
-              .filter(entry => entry.type === "section" || entry.type === "entries")
-              .map(entry => entry.name)
-          }))
-        }
+              .filter(
+                (entry) => entry.type === "section" || entry.type === "entries",
+              )
+              .map((entry) => entry.name),
+          })),
+        },
       ];
     }
 
