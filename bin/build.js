@@ -43,8 +43,6 @@ const CATEGORIES = {
   baseitem: "baseitem",
 };
 
-let sharedFiles = null;
-
 async function build(campaign) {
   const campaignPath = `${SRC_BASE}/campaigns/${campaign}`;
   const meta = await fs.readJson(`${campaignPath}/_meta.json`);
@@ -55,13 +53,8 @@ async function build(campaign) {
   // 1. Read all files into memory once
   const categoryFiles = {};
   for (const [folder, finalKey] of Object.entries(CATEGORIES)) {
-    let allFiles = null;
-    if (sharedFiles === null) {
-      sharedFiles = glob.sync(`${SRC_BASE}/shared/${folder}/**/*.json`);
-    }
-
-    allFiles = [
-      ...sharedFiles,
+    const allFiles = [
+      ...glob.sync(`${SRC_BASE}/shared/${folder}/**/*.json`),
       ...glob.sync(`${campaignPath}/${folder}/**/*.json`),
     ];
     const files = allFiles.filter((file) => {
