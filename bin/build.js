@@ -114,8 +114,11 @@ async function build(campaign) {
 
         merged.push(
           ...filtered.map((entry) => {
-            const { _visibility, ...cleanEntry } = entry;
-            return cleanEntry;
+            const { _visibility, source, ...cleanEntry } = entry;
+            return {
+              source: source === "-SHARED" ? meta.json : source,
+              ...cleanEntry,
+            };
           }),
         );
       }
