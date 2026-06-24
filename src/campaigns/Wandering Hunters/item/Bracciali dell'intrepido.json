@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Bracciali dell'Intrepido",
+    "source": "WanderingHunters",
+    "type": "LA",
+    "rarity": "uncommon",
+    "value": 1000,
+    "weight": 2,
+    "entries": [
+      "Dei bracciali in lacci di pelle nera, con attaccata sopra una spessa piastra di metallo, che coprono tutto il polso e il palmo della mano, lasciando libere di muoversi le dita.",
+      "Questi bracciali possono essere indossati anche mentre si ha indosso un'altra armatura.",
+      {
+        "type": "entries",
+        "name": "Deviare o schivare",
+        "entries": [
+          "Quando una creatura che indossa questi bracciali sta per essere colpita da un attacco in mischia o a distanza, può usare la propria reazione per tentare di deviare o schivare il colpo.",
+          "Invece di lasciare che l'attacco venga risolto normalmente contro la sua Classe Armatura, la creatura effettua un tiro salvezza su Destrezza. Se il risultato del tiro salvezza supera il tiro per colpire dell'attaccante, l'attacco fallisce e si applica uno dei seguenti effetti, in base al tipo di attacco:",
+          {
+            "type": "list",
+            "items": [
+              {
+                "type": "entries",
+                "name": "Attacco in mischia",
+                "entries": [
+                  "L'attacco fallisce e la creatura può effettuare immediatamente un {@action Opportunity Attack|PHB|attacco di opportunità} contro l'attaccante."
+                ]
+              },
+              {
+                "type": "entries",
+                "name": "Attacco a distanza",
+                "entries": [
+                  "L'attacco fallisce e la creatura può scegliere di effettuare una prova di Forza per rilanciare il proiettile verso l'attaccante. Le modalità esatte del contrattacco sono determinate dal DM."
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
