@@ -11,7 +11,7 @@
     "Questo enorme scudo copre quasi interamente chi lo impugna ed è progettato per offrire una protezione superiore rispetto a uno {@item shield|phb|scudo}.",
     "Mentre impugni uno scudo a torre, ottieni un bonus di +4 alla CA invece del normale +2 fornito da uno scudo.",
     "Chi lo indossa ha svantaggio alle prove di Destrezza (Stealth).",
-    "Se il portatore ha un punteggio di Forza inferiore a 15, la sua velocità viene ridotta di 10 piedi."
+    "Se il portatore ha un punteggio di Forza inferiore a 15, la sua velocità viene ridotta di 3 metri."
   ],
   "reqAttune": false
 }
