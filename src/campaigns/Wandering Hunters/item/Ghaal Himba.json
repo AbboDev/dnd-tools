@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Flauto di Ghaal Himba",
+    "source": "WanderingHunters",
+    "type": "INS",
+    "weaponCategory": "simple",
+    "typeAlt": "SCF",
+    "dmgType": "P",
+    "property": [
+      "L",
+      "F"
+    ],
+    "focus": true,
+    "rarity": "none",
+    "value": 1,
+    "weight": 1,
+    "dmg1": "1d4",
+    "entries": [
+      "Un normale flauto dal suono pulito, a differenza del suo aspetto. Oramai è intriso di sangue, feci e altri fluidi di dubbia provenienza.",
+      "Solo Ghaal Himba ha la competenza per poterlo brandire come un'arma da battaglia e come focus magico. Per tutte le altre creature, il flauto è considerato un'arma improvvisata."
+    ]
+  },
+  {
+    "name": "Martila",
+    "source": "WanderingHunters",
+    "type": "M",
+    "weaponCategory": "martial",
+    "dmgType": "B",
+    "property": [
+      "L",
+      "T"
+    ],
+    "range": "20/60",
+    "rarity": "very rare",
+    "value": 5000,
+    "weight": 5,
+    "dmg1": "1d6",
+    "baseItem": "light hammer|PHB",
+    "entries": [
+      {
+        "type": "entries",
+        "name": "Doppietta",
+        "entries": [
+          "Quando usata in combinazione con un'altra {@item Martila|WanderingHunters}, si può effettuare un'azione {@action Two-Weapon Fighting|PHB|per combattere a due armi} sommando il proprio bonus di competenza per i tiri per colpire."
+        ]
+      }
+    ]
+  }
+]
