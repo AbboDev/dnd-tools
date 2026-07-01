@@ -13,7 +13,8 @@
     "build:all": "npm run build:tks && npm run build:wh",
     "publish:wh": "npm run build:wh -- --update",
     "publish:tks": "npm run build:tks -- --update",
-    "publish:all": "npm run publish:tks && npm run publish:wh"
+    "publish:all": "npm run publish:tks && npm run publish:wh",
+    "schemas:download": "node bin/download-schemas.js"
   },
   "bin": {
     "build-campaign": "./bin/build.js"
@@ -23,6 +24,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "5etools-utils": "^0.16.14",
     "commander": "^14.0.3",
     "deepmerge": "^4.3.1",
     "fs-extra": "^11.3.3",
