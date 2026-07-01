@@ -1,3 +1,5 @@
+import { JSONPath } from 'jsonpath-plus';
+
 const visibilitySchema = {
   "_visibility": {
     "type": "array",
@@ -10,20 +12,14 @@ const visibilitySchema = {
   }
 };
 
-export default function patch(schema) {
+export default function patch(schema, relativePath) {
   if (!schema || !schema.$defs) return schema;
 
   // Find all definitions referenced by top-level properties
-  const referencedDefs = [];
-  if (schema.properties) {
-    for (const propVal of Object.values(schema.properties)) {
-      if (propVal.$ref && propVal.$ref.startsWith("#/$defs/")) {
-        referencedDefs.push(propVal.$ref.replace("#/$defs/", ""));
-      } else if (propVal.items?.$ref?.startsWith("#/$defs/")) {
-        referencedDefs.push(propVal.items.$ref.replace("#/$defs/", ""));
-      }
-    }
-  }
+  const referencedDefs = JSONPath({
+    path: '$[anyOf,oneOf,properties]..[?(@property === "$ref" && @.match(/^#/))]',
+    json: schema,
+  }).map(r => r.replace("#/$defs/", ""));
 
   // Fallback: any object definition under $defs
   if (referencedDefs.length === 0) {
@@ -38,15 +34,15 @@ export default function patch(schema) {
   for (const defKey of referencedDefs) {
     if (schema.$defs[defKey]) {
       if (typeof schema.$defs[defKey] === 'object' && 'anyOf' in schema.$defs[defKey]) {
-        for (const item of schema.$defs[defKey].anyOf) {
+        schema.$defs[defKey].anyOf.map(item => {
           if (typeof item === 'object') {
             item.properties = item.properties || {};
-            item.properties._visibility = visibilitySchema;
+            Object.assign(item.properties, visibilitySchema);
           }
-        }
+        })
       } else if (Array.isArray(schema.$defs[defKey])) {
         schema.$defs[defKey].properties = schema.$defs[defKey].properties || {};
-        schema.$defs[defKey].properties._visibility = visibilitySchema;
+        Object.assign(schema.$defs[defKey].properties, visibilitySchema);
       }
     }
   }

@@ -98,7 +98,7 @@ async function run() {
 
     for (const { name, apply } of applicable) {
       console.log(`  [${relativePath}] Applying patch: ${name}`);
-      schema = await apply(schema);
+      schema = await apply(schema, relativePath);
     }
 
     const outPath = path.join(OUTPUT_DIR, relativePath);
