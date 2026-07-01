@@ -1,0 +1,83 @@
+{
+  "name": "Anello della Cieca Lussuria",
+  "source": "WanderingHunters",
+  "type": "RG",
+  "rarity": "legendary",
+  "curse": true,
+  "weight": 0,
+  "entries": [
+    "Questo anello è fatto di un metallo lucido e scuro, con un aspetto molto semplice.",
+    "Finché una creatura indossa questo anello ottiene la condizione {@condition Blinded|PHB|Accecato}.",
+    "Quando una creatura indossa l'anello, deve effettuare un tiro salvezza su Saggezza con {@dc 17}. Se fallisce, tira un {@dice 1d20} sulla seguente tabella. Tutti gli effetti persistono finché l'anello rimane indossato.",
+    {
+      "type": "table",
+      "caption": "Manifestazioni della Lussuria",
+      "colLabels": ["{@dice 1d20}", "Effetto"],
+      "colStyles": ["col-1 text-center", "col-11"],
+      "rows": [
+        ["1-5", "{@condition Charmed|PHB|Affascinato} (vedi sotto)"],
+        ["6-9", "{@condition Frightened|PHB|Spaventato} (vedi sotto)"],
+        ["10-12", "{@condition Restrained|PHB|Trattenuto}"],
+        ["13-15", "{@condition Incapacitated|PHB|Incapacitato}"],
+        ["16-17", "{@condition Stunned|PHB|Stordito}"],
+        ["18", "{@condition Paralyzed|PHB|Paralizzato}"],
+        ["19", "{@condition Unconscious|PHB|Privo di sensi}"],
+        ["20", "{@b Eccitazione Primordiale} (vedi sotto)"]
+      ]
+    },
+    {
+      "type": "entries",
+      "name": "Limitazioni",
+      "entries": [
+        "Finché il portatore è soggetto a una delle condizioni imposte dall'anello ({@condition Charmed|PHB|Affascinato}, {@condition Frightened|PHB|Spaventato}, {@condition Restrained|PHB|Trattenuto}, {@condition Incapacitated|PHB|Incapacitato}, {@condition Stunned|PHB|Stordito}, {@condition Paralyzed|PHB|Paralizzato} o {@condition Unconscious|PHB|Privo di sensi}), non può compiere volontariamente alcuna azione, azione bonus o reazione diversa dal tentare di rimuovere l'anello.",
+        "Se una delle condizioni normalmente impedirebbe al portatore di compiere azioni, essa non gli impedisce di usare la propria azione esclusivamente per effettuare un tiro salvezza su Saggezza con {@dc 17}. Con un successo riesce a rimuovere l'anello, terminando immediatamente tutti gli effetti dell'oggetto."
+      ]
+    },
+    {
+      "type": "entries",
+      "name": "Affascinato",
+      "entries": [
+        "Se una creatura ha fatto indossare l'anello al portatore, essa è considerata il <i>charmer</i>.",
+        "Altrimenti, il portatore è affascinato dalla prima creatura che percepisce e ritiene attraente.",
+        "Se non fosse evidente quale creatura possa ritenere tale, è il DM a determinarla. Se il portatore possiede un punteggio di Intelligenza pari o superiore a 8, il DM sceglie la creatura che, ragionevolmente, il portatore potrebbe trovare più attraente. Se invece il suo punteggio di Intelligenza è inferiore a 8, il DM determina casualmente quale creatura percepita diventa il <i>charmer</i>, indipendentemente dal suo aspetto o dalla sua specie."
+      ]
+    },
+    {
+      "type": "entries",
+      "name": "Spaventato",
+      "entries": [
+        "Se è stata una creatura a far indossare l'anello al portatore, essa è considerata la <i>source of fear</i>.",
+        "In caso contrario, qualsiasi creatura percepita è considerata una valida <i>source of fear</i>."
+      ]
+    },
+    {
+      "type": "entries",
+      "name": "Eccitazione Primordiale",
+      "entries": [
+        "Il portatore cede completamente ai propri istinti più primitivi.",
+        {
+          "type": "list",
+          "items": [
+            "Ottiene vantaggio ai tiri per colpire con attacchi in mischia.",
+            "Infligge +2 ai danni di tutti gli attacchi in mischia.",
+            "Ottiene vantaggio ai tiri salvezza su Forza e Costituzione.",
+            "È immune alle condizioni {@condition Charmed|PHB|Affascinato} e {@condition Frightened|PHB|Spaventato}.",
+            "Ha svantaggio a tutte le prove di Intelligenza, Saggezza e Carisma.",
+            "Non può lanciare incantesimi.",
+            "Deve utilizzare tutto il proprio movimento per avvicinarsi alla creatura che desidera maggiormente, a discrezione del DM.",
+            "Se può effettuare un attacco in mischia, deve farlo.",
+            "Non può tentare volontariamente di rimuovere l'anello né permettere ad altri di farlo."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "name": "Rimozione",
+      "entries": [
+        "Quando l'anello viene rimosso, il portatore effettua un tiro salvezza su Costituzione con CD 12. Se fallisce, ottiene 1 livello di {@condition Exhaustion|PHB|Affaticamento}."
+      ]
+    }
+  ],
+  "hasFluff": true
+}
