@@ -7,12 +7,12 @@
       "title": "Item (Array)",
       "type": "array",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items.json#/$defs/item"
+        "$ref": "./.downloaded/items.json#/$defs/item"
       }
     },
     {
       "title": "Item (Single)",
-      "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items.json#/$defs/item"
+      "$ref": "./.downloaded/items.json#/$defs/item"
     }
   ]
 }

@@ -7,12 +7,12 @@
       "title": "Spell (Array)",
       "type": "array",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/spells/spells.json#/$defs/spell"
+        "$ref": "./.downloaded/spells/spells.json#/$defs/spell"
       }
     },
     {
       "title": "Spell (Single)",
-      "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/spells/spells.json#/$defs/spell"
+      "$ref": "./.downloaded/spells/spells.json#/$defs/spell"
     }
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "meta.schema.json",
+  "version": "0.0.1",
+  "oneOf": [
+    {
+      "title": "Meta (Array)",
+      "type": "array",
+      "items": {
+        "$ref": "./.downloaded/homebrew.json#/$defs/_meta/properties/sources/items"
+      }
+    },
+    {
+      "title": "Meta (Single)",
+      "$ref": "./.downloaded/homebrew.json#/$defs/_meta/properties/sources/items"
+    }
+  ]
+}
