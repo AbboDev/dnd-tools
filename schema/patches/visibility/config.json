@@ -1,0 +1,9 @@
+{
+  "files": [
+    "bestiary/bestiary.json",
+    "entry.json",
+    "items.json",
+    "items-base.json",
+    "spells/spells.json"
+  ]
+}

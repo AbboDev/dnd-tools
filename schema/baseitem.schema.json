@@ -7,12 +7,12 @@
       "title": "Base Item (Array)",
       "type": "array",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items-base.json#/$defs/baseitem"
+        "$ref": "./.downloaded/items-base.json#/$defs/baseitem"
       }
     },
     {
       "title": "Base Item (Single)",
-      "$ref": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/items-base.json#/$defs/baseitem"
+      "$ref": "./.downloaded/items-base.json#/$defs/baseitem"
     }
   ]
 }

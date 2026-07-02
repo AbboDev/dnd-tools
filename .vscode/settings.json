@@ -3,15 +3,9 @@
   "json.schemas": [
     {
       "fileMatch": [
-        "src/**/*.json"
-      ],
-      "url": "./schema/homebrew.schema.json"
-    },
-    {
-      "fileMatch": [
         "src/**/_meta.json"
       ],
-      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/homebrew.json#/$defs/_meta/properties/sources/items"
+      "url": "./schema/meta.schema.json"
     },
     {
       "fileMatch": [
@@ -41,13 +35,13 @@
       "fileMatch": [
         "src/**/adventure/**/*.json"
       ],
-      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/entry.json"
+      "url": "./schema/.downloaded/entry.json"
     },
     {
       "fileMatch": [
         "builds/*.json"
       ],
-      "url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/homebrew.json"
+      "url": "./schema/.downloaded/homebrew.json"
     }
   ],
   "workbench.colorCustomizations": {
