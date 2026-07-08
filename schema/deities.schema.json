@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "deities.schema.json",
+  "version": "0.0.1",
+  "oneOf": [
+    {
+      "title": "Deities (Array)",
+      "type": "array",
+      "items": {
+        "$ref": "./.downloaded/deities.json#/$defs/deity"
+      }
+    },
+    {
+      "title": "Deity (Single)",
+      "$ref": "./.downloaded/deities.json#/$defs/deity"
+    }
+  ]
+}

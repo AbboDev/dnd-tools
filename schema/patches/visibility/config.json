@@ -1,6 +1,7 @@
 {
   "files": [
     "bestiary/bestiary.json",
+    "deities.json",
     "entry.json",
     "items.json",
     "items-base.json",

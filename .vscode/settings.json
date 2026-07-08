@@ -42,6 +42,12 @@
         "builds/*.json"
       ],
       "url": "./schema/.downloaded/homebrew.json"
+    },
+    {
+      "fileMatch": [
+        "src/**/deities/**/*.json"
+      ],
+      "url": "./schema/deities.schema.json"
     }
   ],
   "workbench.colorCustomizations": {
