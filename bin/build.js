@@ -38,7 +38,7 @@ const OUTPUT_DIR = "./builds";
 
 const CATEGORIES = {
   item: "item",
-  deities: "deities",
+  deities: "deity",
   bestiary: "monster",
   spell: "spell",
   baseitem: "baseitem",
