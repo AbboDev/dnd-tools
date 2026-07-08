@@ -1,0 +1,45 @@
+{
+  "name": "Bellum",
+  "title": "Il dio della guerra",
+  "source": "WanderingHunters",
+  "pantheon": "Minu Seiklus",
+  "alignment": [
+    "C",
+    "E"
+  ],
+  "category": "The Pantheon",
+  "domains": [
+    "War"
+  ],
+  "symbol": "Fruste insanguinate",
+  "entries": [
+    {
+      "type": "section",
+      "entries": [
+        "Non più venerato dopo la grande guerra, o almeno questo è quanto credono tutti.",
+        "Qualche folle, nascosto nell'oscurità, come il popolo degli Gnoll sotterranei, lo venera ancora, erigendo altarini e facendo sacrifici in suo onore.",
+        {
+          "type": "entries",
+          "name": "Aspetto Fisico",
+          "entries": [
+            "Raffigurato come un imponente Gnoll, una delle creature più feroce e bellicosa presenti a Kelionè, simbolo perfetto della guerra. La sua figura è massiccia e muscolosa, con un'altezza che supera i due metri. La sua pelle è coperta da un manto di pelliccia ispida e maculata, che varia dal marrone scuro al grigio. I suoi occhi sono di un rosso ardente, pieni di una furia inestinguibile. Le sue zanne sporgenti e affilate sono pronte a lacerare qualsiasi nemico. Indossa un'armatura pesante, fatta di metallo scuro e decorata con simboli di guerra e vittoria."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Carattere",
+          "entries": [
+            "Incarna tutti gli aspetti più terribili e potenti della guerra. È una divinità spietata e implacabile, che trae forza dalla paura e dal caos che permeano il cuore dei mortali. La sua presenza è accompagnata da un'aura di terrore che paralizza i suoi avversari. Non conosce pietà né compassione, e il suo unico scopo è la distruzione e la conquista. Tuttavia, Bellum non è solo un bruto senza cervello; è anche un abile stratega, capace di orchestrare complesse tattiche di battaglia per assicurarsi la vittoria. La sua mente è sempre in fermento, alla ricerca di nuovi modi per seminare discordia e conflitto."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Origini",
+          "entries": [
+            "Bellum si generò più di 200 anni fa, nato dalla paura che permeava il cuore dei mortali. In un'epoca di grande incertezza e terrore, quando le guerre devastavano le terre di Kelionè, la paura collettiva diede vita a questa potente divinità. Da allora, Bellum ha continuato a crescere in potere, alimentato dai conflitti e dalle battaglie che affliggono il mondo."
+          ]
+        }
+      ]
+    }
+  ]
+}
