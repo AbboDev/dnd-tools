@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Falcione di ossidiana",
+    "source": "WanderingHunters",
+    "baseItem": "Falcione corto|WanderingHunters",
+    "rarity": "common",
+    "type": "M",
+    "weight": 6,
+    "weaponCategory": "martial",
+    "property": [
+      "H"
+    ],
+    "dmg1": "1d8",
+    "dmgType": "S",
+    "value": 5000,
+    "entries": [
+      "Una variante più corta di un falcione. La lama è fatta in ossidiana, il che la rende molto più resistente alle alte temperature.",
+      "Solo Lady Myra è pienamente competente nell'utilizzo di quest'arma esotica."
+    ]
+  },
+  {
+    "name": "Tirapugni d'oro",
+    "source": "WanderingHunters",
+    "baseItem": "Tirapugni|WanderingHunters",
+    "rarity": "common",
+    "type": "M",
+    "weight": 6,
+    "weaponCategory": "martial",
+    "property": [
+      "L"
+    ],
+    "dmg1": "1d4",
+    "dmgType": "B",
+    "value": 5000
+  }
+]

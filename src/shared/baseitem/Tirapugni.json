@@ -1,0 +1,15 @@
+{
+  "name": "Tirapugni",
+  "source": "-SHARED",
+  "type": "M",
+  "rarity": "none",
+  "weight": 6,
+  "value": 200,
+  "weaponCategory": "martial",
+  "property": [
+    "L"
+  ],
+  "dmg1": "1d4",
+  "dmgType": "B",
+  "weapon": true
+}
