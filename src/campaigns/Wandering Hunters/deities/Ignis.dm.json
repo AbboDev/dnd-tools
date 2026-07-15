@@ -1,0 +1,45 @@
+{
+  "name": "Ignis",
+  "title": "La dea fabbra del fuoco",
+  "source": "WanderingHunters",
+  "pantheon": "Minu Seiklus",
+  "alignment": [
+    "C",
+    "N"
+  ],
+  "category": "The Pantheon",
+  "domains": [
+    "Forge",
+    "Fire"
+  ],
+  "symbol": "Incudine fiammeggiante",
+  "entries": [
+    {
+      "type": "section",
+      "entries": [
+        "Venerata ad Avili.",
+        {
+          "type": "entries",
+          "name": "Aspetto Fisico",
+          "entries": [
+            "Ignis è una figura fiera e ardente, con un corpo avvolto in fiamme che non la consumano. La sua pelle è di un rosso intenso, come il ferro incandescente, e i suoi occhi brillano come carboni ardenti. I suoi capelli sono una cascata di fuoco, che ondeggia e crepita con ogni suo movimento. Indossa un'armatura di metallo forgiato, decorata con rune antiche che brillano di un calore interno."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Carattere",
+          "entries": [
+            "Ignis è una divinità passionale e determinata, sempre pronta a forgiare nuove creazioni con il suo fuoco sacro. È la patrona dei fabbri e degli artigiani, e il suo tocco può trasformare il metallo grezzo in opere d'arte. Ignis è anche una guerriera coraggiosa, capace di scatenare tempeste di fuoco contro i suoi nemici. Tuttavia, è anche capace di grande calore e protezione, offrendo il suo fuoco per riscaldare e illuminare."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Origini",
+          "entries": [
+            "Ignis nacque dalla prima scintilla che accese il fuoco nel mondo, portando luce e calore ai mortali. È il frutto del desiderio degli uomini di avere il fuoco per proteggersi e creare. Da allora, Ignis ha vegliato su tutte le fiamme del mondo, assicurandosi che continuino a bruciare e a ispirare."
+          ]
+        }
+      ]
+    }
+  ]
+}

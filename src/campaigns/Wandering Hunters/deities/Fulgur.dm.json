@@ -1,0 +1,45 @@
+{
+  "name": "Fulgur",
+  "title": "Il dio del fulmine",
+  "source": "WanderingHunters",
+  "pantheon": "Minu Seiklus",
+  "alignment": [
+    "C",
+    "N"
+  ],
+  "category": "The Pantheon",
+  "domains": [
+    "Tempest",
+    "Wind"
+  ],
+  "symbol": "Fulmine incatenato",
+  "entries": [
+    {
+      "type": "section",
+      "entries": [
+        "Venerato ad Avili, Gerincesek e Umlingo.",
+        {
+          "type": "entries",
+          "name": "Aspetto Fisico",
+          "entries": [
+            "Fulgur è una figura imponente e dinamica, con un corpo avvolto in un'aura di elettricità. La sua pelle è di un grigio metallico, come una tempesta in arrivo, e i suoi occhi brillano di una luce azzurra e intensa. I suoi capelli sono una massa di fulmini che si agitano e crepitano costantemente. Indossa un'armatura fatta di nuvole tempestose, che si muove e cambia forma con ogni suo passo."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Carattere",
+          "entries": [
+            "Fulgur è una divinità impetuosa e imprevedibile, capace di scatenare tempeste e fulmini con un solo gesto. È il signore dei cieli tempestosi e delle tempeste, e il suo compito è portare il cambiamento e la purificazione attraverso il fulmine. Fulgur è anche un messaggero degli dei, capace di portare avvertimenti e segni attraverso i suoi fulmini. Tuttavia, è anche capace di grande potenza e protezione, usando i suoi fulmini per difendere i giusti."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Origini",
+          "entries": [
+            "Fulgur nacque dal primo fulmine che squarciò il cielo, portando luce e potenza. È il frutto del desiderio dei mortali di avere segni e avvertimenti dagli dei. Da allora, Fulgur ha vegliato su tutte le tempeste del mondo, assicurandosi che continuino a portare cambiamento e rinnovamento."
+          ]
+        }
+      ]
+    }
+  ]
+}

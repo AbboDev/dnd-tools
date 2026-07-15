@@ -1,0 +1,45 @@
+{
+  "name": "Tenebris",
+  "title": "La dea scheletrica delle tenebre",
+  "source": "WanderingHunters",
+  "pantheon": "Minu Seiklus",
+  "alignment": [
+    "N",
+    "E"
+  ],
+  "category": "The Pantheon",
+  "domains": [
+    "Death",
+    "Void"
+  ],
+  "symbol": "Corona di ossa",
+  "entries": [
+    {
+      "type": "section",
+      "entries": [
+        "Venerata a Bawang.",
+        {
+          "type": "entries",
+          "name": "Aspetto Fisico",
+          "entries": [
+            "Tenebris è una figura inquietante e misteriosa, con un corpo scheletrico avvolto in un mantello nero che sembra fatto di ombre. I suoi occhi sono due pozzi di oscurità, privi di qualsiasi luce. Le sue mani scheletriche sono lunghe e affusolate, capaci di afferrare e trascinare le anime nell'oscurità eterna. Indossa una corona di ossa, simbolo del suo dominio sulle tenebre e sulla morte."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Carattere",
+          "entries": [
+            "Tenebris è una divinità fredda e implacabile, che trae forza dalla paura e dalla disperazione. È la signora delle ombre e dei segreti, capace di nascondere qualsiasi cosa nel suo abbraccio oscuro. Non conosce pietà né compassione, e il suo unico scopo è portare l'oscurità dove c'è luce. Tuttavia, Tenebris è anche una guardiana dei segreti e delle verità nascoste, e può rivelare conoscenze proibite a coloro che osano cercarla."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Origini",
+          "entries": [
+            "Tenebris nacque dalle profondità del caos primordiale, quando le prime ombre si staccarono dalla luce. È il risultato delle paure più profonde dei mortali, che temono l'ignoto e la morte. Da allora, Tenebris ha regnato sulle tenebre, alimentando il terrore e l'oscurità nel cuore degli uomini."
+          ]
+        }
+      ]
+    }
+  ]
+}

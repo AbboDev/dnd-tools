@@ -1,0 +1,43 @@
+{
+  "name": "Cataracta",
+  "title": "Il dio marmoreo dell'acqua",
+  "source": "WanderingHunters",
+  "pantheon": "Minu Seiklus",
+  "alignment": [
+    "N"
+  ],
+  "category": "The Pantheon",
+  "domains": [
+    "Ocean"
+  ],
+  "symbol": "Serpente marino",
+  "entries": [
+    {
+      "type": "section",
+      "entries": [
+        "Venerato a Umlingo e Bawang.",
+        {
+          "type": "entries",
+          "name": "Aspetto Fisico",
+          "entries": [
+            "Cataracta è una figura imponente e maestosa, con un corpo scolpito nel marmo bianco più puro. La sua pelle è liscia e fredda al tatto, come la superficie di un fiume ghiacciato. I suoi occhi sono di un blu profondo, come gli abissi oceanici, e i suoi capelli sembrano onde increspate dal vento. Indossa un mantello fatto di acqua corrente, che scorre incessantemente senza mai bagnarlo."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Carattere",
+          "entries": [
+            "Cataracta è una divinità calma e riflessiva, ma anche potente e inarrestabile come le acque che rappresenta. È il guardiano dei fiumi, dei laghi e degli oceani, e il suo compito è mantenere l'equilibrio delle acque nel mondo. Può essere gentile e generoso, offrendo acqua pura e vita, ma anche terribile e distruttivo, scatenando tempeste e inondazioni quando è provocato."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Origini",
+          "entries": [
+            "Cataracta nacque dalle prime gocce d'acqua che caddero sulla terra, portando vita e nutrimento. È il frutto del desiderio dei mortali di avere acqua per sopravvivere e prosperare. Da allora, Cataracta ha vegliato su tutte le acque del mondo, assicurandosi che continuino a scorrere e a sostenere la vita."
+          ]
+        }
+      ]
+    }
+  ]
+}

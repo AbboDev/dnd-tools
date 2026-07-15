@@ -1,0 +1,46 @@
+{
+  "name": "Magicae",
+  "title": "La dea falena arcana",
+  "source": "WanderingHunters",
+  "pantheon": "Minu Seiklus",
+  "alignment": [
+    "G",
+    "N"
+  ],
+  "category": "The Pantheon",
+  "domains": [
+    "Arcana",
+    "Nature",
+    "Moon"
+  ],
+  "symbol": "Falena stellata",
+  "entries": [
+    {
+      "type": "section",
+      "entries": [
+        "Venerata da Fegefeuer, Gerincesek e Umlingo.",
+        {
+          "type": "entries",
+          "name": "Aspetto Fisico",
+          "entries": [
+            "Magicae è una figura eterea e misteriosa, con un corpo delicato e leggero come quello di una falena. La sua pelle è di un pallido iridescente, che cambia colore a seconda della luce. I suoi occhi sono grandi e luminosi, riflettendo la saggezza e il mistero dell'arcano. I suoi capelli sono una cascata di polvere di stelle, che brilla e scintilla con ogni suo movimento. Indossa un abito fatto di grosse foglie di edera. Sulla schiena ha delle grandi ali luminose simili a quelle di una farfalla."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Carattere",
+          "entries": [
+            "Magicae è una divinità enigmatica e affascinante, capace di manipolare le forze arcane con facilità. È la patrona della magia e degli incantesimi, e il suo tocco può trasformare la realtà stessa. Magicae è anche una guida per coloro che cercano la conoscenza arcana, offrendo saggezza e insegnamenti a coloro che sono degni. Tuttavia, è anche capace di grande potenza e mistero, usando la sua magia per proteggere e nascondere."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Origini",
+          "entries": [
+            "Magicae nacque dal primo incantesimo che fu lanciato nel mondo, portando magia e mistero. È il frutto del desiderio dei mortali di avere potere e conoscenza. Da allora, Magicae ha vegliato su tutte le arti magiche del mondo, assicurandosi che continuino a prosperare e a ispirare."
+          ]
+        }
+      ]
+    }
+  ]
+}

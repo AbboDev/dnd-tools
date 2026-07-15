@@ -1,0 +1,64 @@
+{
+  "name": "Lux",
+  "title": "Il dio della vita",
+  "source": "WanderingHunters",
+  "pantheon": "Minu Seiklus",
+  "alignment": [
+    "N",
+    "G"
+  ],
+  "category": "The Pantheon",
+  "domains": [
+    "Life",
+    "Light"
+  ],
+  "symbol": "Sole sorridente",
+  "entries": [
+    {
+      "type": "section",
+      "entries": [
+        "Principalmente venerato a Fegefeuer e Gerincesek, per la sua affinità con la natura.",
+        {
+          "type": "entries",
+          "name": "Aspetto Fisico",
+          "entries": [
+            "Lux è una figura radiosa e luminosa, la sua presenza è avvolta da un'aura dorata che emana calore e vitalità. Ha un aspetto etereo, con capelli lunghi e fluenti che sembrano fatti di pura luce. I suoi occhi brillano come stelle, riflettendo la saggezza e la benevolenza. Indossa una tunica bianca e semplice, simbolo di purezza e rinascita, decorata con motivi floreali che cambiano colore a seconda delle stagioni."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Carattere",
+          "entries": [
+            "Lux è una divinità benevola e compassionevole, sempre pronta a offrire conforto e guarigione. È il protettore della vita in tutte le sue forme, dalla più piccola pianta al più grande degli animali. La sua presenza infonde speranza e serenità, e il suo tocco può curare le ferite e ridare forza ai deboli. Lux è anche un saggio consigliere, capace di guidare i mortali verso scelte giuste e illuminate."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Origini",
+          "entries": [
+            "Lux nacque all'alba dei tempi, quando la prima luce del sole illuminò il mondo. È il frutto del desiderio dei mortali di trovare speranza e vita in un mondo spesso oscuro e pericoloso. Da allora, Lux ha vegliato su tutte le creature viventi, assicurandosi che la vita continui a prosperare."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "I templi",
+          "entries": [
+            "I tempi di Lux sono sempre grandi torri alte almeno tre piani, con arcate a sesto acuto che decorano la circonferenza esterna ed una cupola superiore vetrata per far entrare la luce del giorno. Gli interni sono spogli e tutto l'arredamento, le scale e le porte sono in legno.",
+            "Il pianterreno presenta sempre delle panche dove i monaci e i fedeli possono pregare, più un presbiterio rialzato con un altare in legno."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Il clero",
+          "entries": [
+            "I suoi monaci sono vestiti con un saio di colore beige e con varie corde colorate in oro, legate in punti del saio per stringerlo sul corpo, come la vita, i polsi e le spalle. Sulla schiena, sempre sul saio, vi è dipinto un sole sorridente. Sono guidati da un abate, che gestisce e custodisce il monastero a cui è assegnato.",
+            "Non hanno fatto voto di castità.",
+            "Salvo l'abate, tutti vivono nelle case limitrofe al luogo di culto.",
+            "Sono ben accetti sia uomini che donne.",
+            "Gli abati indossano un saio leggermente più adornato di bottoni e decori, ma senza perdere il messaggio."
+          ]
+        }
+      ]
+    }
+  ]
+}
